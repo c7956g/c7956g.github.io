@@ -110,7 +110,7 @@
 		// 可由 https://console.developers.google.com/apis 申請
 		const embedApiKey = 'c51462305389e07545f18daad7fdfc0c96911e58';
 
-		const uri = 'https://sheets.googleapis.com/v4/spreadsheets/2PACX-1vQlK5bK8kG3VlQIgCeU70CFRVSJybXHbftrZ7uW4lrR0XtGzNFJeD_Rrec9qIE6QYrSnli4MlyWGrGf/pubhtml/values/工作表1?alt=json&key=' + embedApiKey;
+		const uri = 'https://sheets.googleapis.com/v4/spreadsheets/2PACX-1vQlK5bK8kG3VlQIgCeU70CFRVSJybXHbftrZ7uW4lrR0XtGzNFJeD_Rrec9qIE6QYrSnli4MlyWGrGf/pubhtml/values/value?alt=json&key=' + embedApiKey;
 
 		const duration = 2000; // 拉霸效果執行多久
 
@@ -134,8 +134,7 @@
 				let txt; // 結果
 
 
-				// 地圖
-				const map = document.querySelector('#map iframe');
+				
 
 				// 按鈕
 				const btn = document.querySelector('.btn-start');
@@ -176,22 +175,7 @@
 							// 停止拉霸動畫
 							Array.prototype.forEach.call(list, l => l.removeAttribute('class'));
 
-							// 改變地圖位置
-							map.src = 'https://www.google.com/maps/embed/v1/place?key=' + embedApiKey + '&q=' + txt;
-
-						}, duration);
-
-						// 顯示地圖
-						map.addEventListener('load', () => {
-							map.classList.remove('hidden');
-							e.target.classList.remove('not-allow');
-						}, false);
-					};
-
-
-
-					// 地圖先消失
-					map.classList.add('hidden');
+							
 
 					// 判斷葷素後，開始執行
 					let vage = document.getElementById('vage');
