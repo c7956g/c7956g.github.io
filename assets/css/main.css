@@ -1298,7 +1298,7 @@
   color: rgba(41, 44, 55, 0.54);
 }
 .btn-start::after {
-  content: "轉動命運輪盤";
+  content: "點我抽大獎";
   line-height: 1;
 }
 .btn-start:hover {
