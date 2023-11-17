@@ -7,15 +7,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
 
 	<title>1112酷碰選 - August - Let's Write</title>
-	<meta name="description" content="由 August 開發，以 Google Sheets 當資料庫，介接 Google Map Embed API，輕鬆好管理。">
+	<meta name="description" content="1112酷碰選？由 August 開發，以 Google Sheets 當資料庫，介接 Google Map Embed API，輕鬆好管理。">
 	<link rel="shortcut icon" href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png"/>
 	<meta property="og:url" content="https://letswritetw.github.io/letswrite-food-check/" />
 	<meta property="og:site_name" content="Let's Write" />
-	<meta property="og:title" content="1112酷碰選" />
-	<meta property="og:description" content="由 August 開發，以 Google Sheets 當資料庫，介接 Google Map Embed API，輕鬆好管理。" />
+	<meta property="og:title" content="1112酷碰選 - by August - Let's Write" />
+	<meta property="og:description" content="1112酷碰選？由 August 開發，以 Google Sheets 當資料庫，介接 Google Map Embed API，輕鬆好管理。" />
 	<meta property="og:image" content="https://letswritetw.github.io/letswrite-food-check/assets/img/bg-food.jpg" />
 	<meta itemprop="name" content="1112酷碰選 - by August">
-	<meta itemprop="description" content="由 August 開發，以 Google Sheets 當資料庫，介接 Google Map Embed API，輕鬆好管理。">
+	<meta itemprop="description" content="1112酷碰選？由 August 開發，以 Google Sheets 當資料庫，介接 Google Map Embed API，輕鬆好管理。">
 	<meta itemprop="image" content="https://letswritetw.github.io/letswrite-food-check/assets/img/bg-food.jpg">
 
 
@@ -50,7 +50,7 @@
 			<section class="god">
 				<h1>
 					<span class="wrap">
-						<span>1112酷碰選</span>
+						<span>1112酷碰選呢？</span>
 					</span>
 				</h1>
 			</section>
@@ -79,7 +79,10 @@
 				</a>
 			</section>
 
-		
+			<!--  地圖  -->
+			<section id="map" class="map">
+				<iframe loading="lazy" frameborder="0" style="border:0" src="" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</section>
 		</div>
 	</main>
 
@@ -93,10 +96,10 @@
 	<!--  for search  -->
 	<div class="search-only">
 		<h2>
-			午餐吃什麼選擇器 Google Excel、Google Map Embed API
+			1112酷碰選選擇器 Google Excel、Google Map Embed API
 		</h2>
 		<p>
-			由 August 開發，以 Google Excel 當資料庫，介接 Google Map Embed API，輕鬆好管理。
+			1112酷碰選？由 August 開發，以 Google Excel 當資料庫，介接 Google Map Embed API，輕鬆好管理。
 		</p>
 	</div>
 	
@@ -107,9 +110,8 @@
 		// 可由 https://console.developers.google.com/apis 申請
 		const embedApiKey = 'c51462305389e07545f18daad7fdfc0c96911e58';
 
-		const uri = 'https://sheets.googleapis.com/v4/spreadsheets/11wLZL0bNoD7ZQwfN3Tkx41YB6IgLbv4ftsrxywA0114/values/lets-write?alt=json&key=' + embedApiKey;
-		
-		
+		const uri = 'https://sheets.googleapis.com/v4/spreadsheets/2PACX-1vQlK5bK8kG3VlQIgCeU70CFRVSJybXHbftrZ7uW4lrR0XtGzNFJeD_Rrec9qIE6QYrSnli4MlyWGrGf/values/value?alt=json&key=' + embedApiKey;
+
 		const duration = 2000; // 拉霸效果執行多久
 
 		fetch(uri)
@@ -132,7 +134,8 @@
 				let txt; // 結果
 
 
-				
+				// 地圖
+				const map = document.querySelector('#map iframe');
 
 				// 按鈕
 				const btn = document.querySelector('.btn-start');
@@ -173,7 +176,22 @@
 							// 停止拉霸動畫
 							Array.prototype.forEach.call(list, l => l.removeAttribute('class'));
 
-							
+							// 改變地圖位置
+							map.src = 'https://www.google.com/maps/embed/v1/place?key=' + embedApiKey + '&q=' + txt;
+
+						}, duration);
+
+						// 顯示地圖
+						map.addEventListener('load', () => {
+							map.classList.remove('hidden');
+							e.target.classList.remove('not-allow');
+						}, false);
+					};
+
+
+
+					// 地圖先消失
+					map.classList.add('hidden');
 
 					// 判斷葷素後，開始執行
 					let vage = document.getElementById('vage');
