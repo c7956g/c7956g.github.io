@@ -92,8 +92,8 @@
 .god .wrap > .span-1 {
   -webkit-animation-name: spin-1;
           animation-name: spin-1;
-  -webkit-animation-duration: 0.01s;
-          animation-duration: 0.01s;
+  -webkit-animation-duration: 0.03s;
+          animation-duration: 0.03s;
 }
 
 @-webkit-keyframes spin-2 {
@@ -116,8 +116,8 @@
 .god .wrap > .span-2 {
   -webkit-animation-name: spin-2;
           animation-name: spin-2;
-  -webkit-animation-duration: 0.02s;
-          animation-duration: 0.02s;
+  -webkit-animation-duration: 0.06s;
+          animation-duration: 0.06s;
 }
 
 @-webkit-keyframes spin-3 {
@@ -140,8 +140,8 @@
 .god .wrap > .span-3 {
   -webkit-animation-name: spin-3;
           animation-name: spin-3;
-  -webkit-animation-duration: 0.03s;
-          animation-duration: 0.03s;
+  -webkit-animation-duration: 0.09s;
+          animation-duration: 0.09s;
 }
 
 @-webkit-keyframes spin-4 {
@@ -164,8 +164,8 @@
 .god .wrap > .span-4 {
   -webkit-animation-name: spin-4;
           animation-name: spin-4;
-  -webkit-animation-duration: 0.04s;
-          animation-duration: 0.04s;
+  -webkit-animation-duration: 0.12s;
+          animation-duration: 0.12s;
 }
 
 @-webkit-keyframes spin-5 {
@@ -188,8 +188,8 @@
 .god .wrap > .span-5 {
   -webkit-animation-name: spin-5;
           animation-name: spin-5;
-  -webkit-animation-duration: 0.05s;
-          animation-duration: 0.05s;
+  -webkit-animation-duration: 0.15s;
+          animation-duration: 0.15s;
 }
 
 @-webkit-keyframes spin-6 {
@@ -212,8 +212,8 @@
 .god .wrap > .span-6 {
   -webkit-animation-name: spin-6;
           animation-name: spin-6;
-  -webkit-animation-duration: 0.06s;
-          animation-duration: 0.06s;
+  -webkit-animation-duration: 0.18s;
+          animation-duration: 0.18s;
 }
 
 @-webkit-keyframes spin-7 {
@@ -236,8 +236,8 @@
 .god .wrap > .span-7 {
   -webkit-animation-name: spin-7;
           animation-name: spin-7;
-  -webkit-animation-duration: 0.07s;
-          animation-duration: 0.07s;
+  -webkit-animation-duration: 0.21s;
+          animation-duration: 0.21s;
 }
 
 @-webkit-keyframes spin-8 {
@@ -260,8 +260,8 @@
 .god .wrap > .span-8 {
   -webkit-animation-name: spin-8;
           animation-name: spin-8;
-  -webkit-animation-duration: 0.08s;
-          animation-duration: 0.08s;
+  -webkit-animation-duration: 0.24s;
+          animation-duration: 0.24s;
 }
 
 @-webkit-keyframes spin-9 {
@@ -284,8 +284,8 @@
 .god .wrap > .span-9 {
   -webkit-animation-name: spin-9;
           animation-name: spin-9;
-  -webkit-animation-duration: 0.09s;
-          animation-duration: 0.09s;
+  -webkit-animation-duration: 0.27s;
+          animation-duration: 0.27s;
 }
 
 @-webkit-keyframes spin-10 {
@@ -308,8 +308,8 @@
 .god .wrap > .span-10 {
   -webkit-animation-name: spin-10;
           animation-name: spin-10;
-  -webkit-animation-duration: 0.1s;
-          animation-duration: 0.1s;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 
 @-webkit-keyframes spin-11 {
@@ -332,8 +332,8 @@
 .god .wrap > .span-11 {
   -webkit-animation-name: spin-11;
           animation-name: spin-11;
-  -webkit-animation-duration: 0.11s;
-          animation-duration: 0.11s;
+  -webkit-animation-duration: 0.33s;
+          animation-duration: 0.33s;
 }
 
 @-webkit-keyframes spin-12 {
@@ -356,8 +356,8 @@
 .god .wrap > .span-12 {
   -webkit-animation-name: spin-12;
           animation-name: spin-12;
-  -webkit-animation-duration: 0.12s;
-          animation-duration: 0.12s;
+  -webkit-animation-duration: 0.36s;
+          animation-duration: 0.36s;
 }
 
 @-webkit-keyframes spin-13 {
@@ -380,8 +380,8 @@
 .god .wrap > .span-13 {
   -webkit-animation-name: spin-13;
           animation-name: spin-13;
-  -webkit-animation-duration: 0.13s;
-          animation-duration: 0.13s;
+  -webkit-animation-duration: 0.39s;
+          animation-duration: 0.39s;
 }
 
 @-webkit-keyframes spin-14 {
@@ -404,8 +404,8 @@
 .god .wrap > .span-14 {
   -webkit-animation-name: spin-14;
           animation-name: spin-14;
-  -webkit-animation-duration: 0.14s;
-          animation-duration: 0.14s;
+  -webkit-animation-duration: 0.42s;
+          animation-duration: 0.42s;
 }
 
 @-webkit-keyframes spin-15 {
@@ -428,8 +428,8 @@
 .god .wrap > .span-15 {
   -webkit-animation-name: spin-15;
           animation-name: spin-15;
-  -webkit-animation-duration: 0.15s;
-          animation-duration: 0.15s;
+  -webkit-animation-duration: 0.45s;
+          animation-duration: 0.45s;
 }
 
 @-webkit-keyframes spin-16 {
@@ -452,8 +452,8 @@
 .god .wrap > .span-16 {
   -webkit-animation-name: spin-16;
           animation-name: spin-16;
-  -webkit-animation-duration: 0.16s;
-          animation-duration: 0.16s;
+  -webkit-animation-duration: 0.48s;
+          animation-duration: 0.48s;
 }
 
 @-webkit-keyframes spin-17 {
@@ -476,8 +476,8 @@
 .god .wrap > .span-17 {
   -webkit-animation-name: spin-17;
           animation-name: spin-17;
-  -webkit-animation-duration: 0.17s;
-          animation-duration: 0.17s;
+  -webkit-animation-duration: 0.51s;
+          animation-duration: 0.51s;
 }
 
 @-webkit-keyframes spin-18 {
@@ -500,8 +500,8 @@
 .god .wrap > .span-18 {
   -webkit-animation-name: spin-18;
           animation-name: spin-18;
-  -webkit-animation-duration: 0.18s;
-          animation-duration: 0.18s;
+  -webkit-animation-duration: 0.54s;
+          animation-duration: 0.54s;
 }
 
 @-webkit-keyframes spin-19 {
@@ -524,8 +524,8 @@
 .god .wrap > .span-19 {
   -webkit-animation-name: spin-19;
           animation-name: spin-19;
-  -webkit-animation-duration: 0.19s;
-          animation-duration: 0.19s;
+  -webkit-animation-duration: 0.57s;
+          animation-duration: 0.57s;
 }
 
 @-webkit-keyframes spin-20 {
@@ -548,8 +548,8 @@
 .god .wrap > .span-20 {
   -webkit-animation-name: spin-20;
           animation-name: spin-20;
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
 
 @-webkit-keyframes spin-21 {
@@ -572,8 +572,8 @@
 .god .wrap > .span-21 {
   -webkit-animation-name: spin-21;
           animation-name: spin-21;
-  -webkit-animation-duration: 0.21s;
-          animation-duration: 0.21s;
+  -webkit-animation-duration: 0.63s;
+          animation-duration: 0.63s;
 }
 
 @-webkit-keyframes spin-22 {
@@ -596,8 +596,8 @@
 .god .wrap > .span-22 {
   -webkit-animation-name: spin-22;
           animation-name: spin-22;
-  -webkit-animation-duration: 0.22s;
-          animation-duration: 0.22s;
+  -webkit-animation-duration: 0.66s;
+          animation-duration: 0.66s;
 }
 
 @-webkit-keyframes spin-23 {
@@ -620,8 +620,8 @@
 .god .wrap > .span-23 {
   -webkit-animation-name: spin-23;
           animation-name: spin-23;
-  -webkit-animation-duration: 0.23s;
-          animation-duration: 0.23s;
+  -webkit-animation-duration: 0.69s;
+          animation-duration: 0.69s;
 }
 
 @-webkit-keyframes spin-24 {
@@ -644,8 +644,8 @@
 .god .wrap > .span-24 {
   -webkit-animation-name: spin-24;
           animation-name: spin-24;
-  -webkit-animation-duration: 0.24s;
-          animation-duration: 0.24s;
+  -webkit-animation-duration: 0.72s;
+          animation-duration: 0.72s;
 }
 
 @-webkit-keyframes spin-25 {
@@ -668,8 +668,8 @@
 .god .wrap > .span-25 {
   -webkit-animation-name: spin-25;
           animation-name: spin-25;
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
 }
 
 @-webkit-keyframes spin-26 {
@@ -692,8 +692,8 @@
 .god .wrap > .span-26 {
   -webkit-animation-name: spin-26;
           animation-name: spin-26;
-  -webkit-animation-duration: 0.26s;
-          animation-duration: 0.26s;
+  -webkit-animation-duration: 0.78s;
+          animation-duration: 0.78s;
 }
 
 @-webkit-keyframes spin-27 {
@@ -716,8 +716,8 @@
 .god .wrap > .span-27 {
   -webkit-animation-name: spin-27;
           animation-name: spin-27;
-  -webkit-animation-duration: 0.27s;
-          animation-duration: 0.27s;
+  -webkit-animation-duration: 0.81s;
+          animation-duration: 0.81s;
 }
 
 @-webkit-keyframes spin-28 {
@@ -740,8 +740,8 @@
 .god .wrap > .span-28 {
   -webkit-animation-name: spin-28;
           animation-name: spin-28;
-  -webkit-animation-duration: 0.28s;
-          animation-duration: 0.28s;
+  -webkit-animation-duration: 0.84s;
+          animation-duration: 0.84s;
 }
 
 @-webkit-keyframes spin-29 {
@@ -764,8 +764,8 @@
 .god .wrap > .span-29 {
   -webkit-animation-name: spin-29;
           animation-name: spin-29;
-  -webkit-animation-duration: 0.29s;
-          animation-duration: 0.29s;
+  -webkit-animation-duration: 0.87s;
+          animation-duration: 0.87s;
 }
 
 @-webkit-keyframes spin-30 {
@@ -788,8 +788,8 @@
 .god .wrap > .span-30 {
   -webkit-animation-name: spin-30;
           animation-name: spin-30;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
 }
 
 @-webkit-keyframes spin-31 {
