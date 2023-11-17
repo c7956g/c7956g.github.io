@@ -79,10 +79,7 @@
 				</a>
 			</section>
 
-			<!--  地圖  -->
-			<section id="map" class="map">
-				<iframe loading="lazy" frameborder="0" style="border:0" src="" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
-			</section>
+		
 		</div>
 	</main>
 
@@ -106,12 +103,7 @@
 
 	<script>
 
-		// Maps Embed API、Google Sheets API 的 金鑰
-		// 可由 https://console.developers.google.com/apis 申請
-		const embedApiKey = 'c51462305389e07545f18daad7fdfc0c96911e58';
-
-		const uri = 'https://sheets.googleapis.com/v4/spreadsheets/2PACX-1vQlK5bK8kG3VlQIgCeU70CFRVSJybXHbftrZ7uW4lrR0XtGzNFJeD_Rrec9qIE6QYrSnli4MlyWGrGf/pubhtml/values/value?alt=json&key=' + embedApiKey;
-
+		
 		const duration = 2000; // 拉霸效果執行多久
 
 		fetch(uri)
