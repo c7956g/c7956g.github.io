@@ -114,8 +114,8 @@
   }
 }
 .god .wrap > .span-2 {
-  -webkit-animation-name: spin-2;
-          animation-name: spin-2;
+  -webkit-animation-name: spin-5;
+          animation-name: spin-5;
   -webkit-animation-duration: 0.06s;
           animation-duration: 0.06s;
 }
@@ -138,8 +138,8 @@
   }
 }
 .god .wrap > .span-3 {
-  -webkit-animation-name: spin-3;
-          animation-name: spin-3;
+  -webkit-animation-name: spin-10;
+          animation-name: spin-10;
   -webkit-animation-duration: 0.09s;
           animation-duration: 0.09s;
 }
@@ -162,8 +162,8 @@
   }
 }
 .god .wrap > .span-4 {
-  -webkit-animation-name: spin-4;
-          animation-name: spin-4;
+  -webkit-animation-name: spin-15;
+          animation-name: spin-15;
   -webkit-animation-duration: 0.12s;
           animation-duration: 0.12s;
 }
@@ -186,8 +186,8 @@
   }
 }
 .god .wrap > .span-5 {
-  -webkit-animation-name: spin-5;
-          animation-name: spin-5;
+  -webkit-animation-name: spin-20;
+          animation-name: spin-20;
   -webkit-animation-duration: 0.15s;
           animation-duration: 0.15s;
 }
@@ -210,8 +210,8 @@
   }
 }
 .god .wrap > .span-6 {
-  -webkit-animation-name: spin-6;
-          animation-name: spin-6;
+  -webkit-animation-name: spin-25;
+          animation-name: spin-25;
   -webkit-animation-duration: 0.18s;
           animation-duration: 0.18s;
 }
@@ -234,8 +234,8 @@
   }
 }
 .god .wrap > .span-7 {
-  -webkit-animation-name: spin-7;
-          animation-name: spin-7;
+  -webkit-animation-name: spin-30;
+          animation-name: spin-30;
   -webkit-animation-duration: 0.21s;
           animation-duration: 0.21s;
 }
@@ -258,8 +258,8 @@
   }
 }
 .god .wrap > .span-8 {
-  -webkit-animation-name: spin-8;
-          animation-name: spin-8;
+  -webkit-animation-name: spin-35;
+          animation-name: spin-35;
   -webkit-animation-duration: 0.24s;
           animation-duration: 0.24s;
 }
@@ -282,8 +282,8 @@
   }
 }
 .god .wrap > .span-9 {
-  -webkit-animation-name: spin-9;
-          animation-name: spin-9;
+  -webkit-animation-name: spin-40;
+          animation-name: spin-40;
   -webkit-animation-duration: 0.27s;
           animation-duration: 0.27s;
 }
@@ -306,8 +306,8 @@
   }
 }
 .god .wrap > .span-10 {
-  -webkit-animation-name: spin-10;
-          animation-name: spin-10;
+  -webkit-animation-name: spin-45;
+          animation-name: spin-45;
   -webkit-animation-duration: 0.3s;
           animation-duration: 0.3s;
 }
@@ -330,8 +330,8 @@
   }
 }
 .god .wrap > .span-11 {
-  -webkit-animation-name: spin-11;
-          animation-name: spin-11;
+  -webkit-animation-name: spin-50;
+          animation-name: spin-50;
   -webkit-animation-duration: 0.33s;
           animation-duration: 0.33s;
 }
@@ -354,8 +354,8 @@
   }
 }
 .god .wrap > .span-12 {
-  -webkit-animation-name: spin-12;
-          animation-name: spin-12;
+  -webkit-animation-name: spin-55;
+          animation-name: spin-55;
   -webkit-animation-duration: 0.36s;
           animation-duration: 0.36s;
 }
@@ -378,8 +378,8 @@
   }
 }
 .god .wrap > .span-13 {
-  -webkit-animation-name: spin-13;
-          animation-name: spin-13;
+  -webkit-animation-name: spin-60;
+          animation-name: spin-60;
   -webkit-animation-duration: 0.39s;
           animation-duration: 0.39s;
 }
@@ -402,8 +402,8 @@
   }
 }
 .god .wrap > .span-14 {
-  -webkit-animation-name: spin-14;
-          animation-name: spin-14;
+  -webkit-animation-name: spin-65;
+          animation-name: spin-65;
   -webkit-animation-duration: 0.42s;
           animation-duration: 0.42s;
 }
@@ -426,8 +426,8 @@
   }
 }
 .god .wrap > .span-15 {
-  -webkit-animation-name: spin-15;
-          animation-name: spin-15;
+  -webkit-animation-name: spin-70;
+          animation-name: spin-70;
   -webkit-animation-duration: 0.45s;
           animation-duration: 0.45s;
 }
@@ -450,8 +450,8 @@
   }
 }
 .god .wrap > .span-16 {
-  -webkit-animation-name: spin-16;
-          animation-name: spin-16;
+  -webkit-animation-name: spin-75;
+          animation-name: spin-75;
   -webkit-animation-duration: 0.48s;
           animation-duration: 0.48s;
 }
@@ -474,8 +474,8 @@
   }
 }
 .god .wrap > .span-17 {
-  -webkit-animation-name: spin-17;
-          animation-name: spin-17;
+  -webkit-animation-name: spin-80;
+          animation-name: spin-80;
   -webkit-animation-duration: 0.51s;
           animation-duration: 0.51s;
 }
@@ -498,8 +498,8 @@
   }
 }
 .god .wrap > .span-18 {
-  -webkit-animation-name: spin-18;
-          animation-name: spin-18;
+  -webkit-animation-name: spin-85;
+          animation-name: spin-85;
   -webkit-animation-duration: 0.54s;
           animation-duration: 0.54s;
 }
@@ -522,8 +522,8 @@
   }
 }
 .god .wrap > .span-19 {
-  -webkit-animation-name: spin-19;
-          animation-name: spin-19;
+  -webkit-animation-name: spin-90;
+          animation-name: spin-90;
   -webkit-animation-duration: 0.57s;
           animation-duration: 0.57s;
 }
@@ -546,8 +546,8 @@
   }
 }
 .god .wrap > .span-20 {
-  -webkit-animation-name: spin-20;
-          animation-name: spin-20;
+  -webkit-animation-name: spin-95;
+          animation-name: spin-95;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
 }
@@ -570,8 +570,8 @@
   }
 }
 .god .wrap > .span-21 {
-  -webkit-animation-name: spin-21;
-          animation-name: spin-21;
+  -webkit-animation-name: spin-100;
+          animation-name: spin-100;
   -webkit-animation-duration: 0.63s;
           animation-duration: 0.63s;
 }
