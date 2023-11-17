@@ -92,8 +92,8 @@
 .god .wrap > .span-1 {
   -webkit-animation-name: spin-1;
           animation-name: spin-1;
-  -webkit-animation-duration: 0.03s;
-          animation-duration: 0.03s;
+  -webkit-animation-duration: 0.01s;
+          animation-duration: 0.01s;
 }
 
 @-webkit-keyframes spin-2 {
@@ -114,10 +114,10 @@
   }
 }
 .god .wrap > .span-2 {
-  -webkit-animation-name: spin-20;
-          animation-name: spin-20;
-  -webkit-animation-duration: 0.06s;
-          animation-duration: 0.06s;
+  -webkit-animation-name: spin-2;
+          animation-name: spin-2;
+  -webkit-animation-duration: 0.02s;
+          animation-duration: 0.02s;
 }
 
 @-webkit-keyframes spin-3 {
@@ -138,10 +138,10 @@
   }
 }
 .god .wrap > .span-3 {
-  -webkit-animation-name: spin-40;
-          animation-name: spin-40;
-  -webkit-animation-duration: 0.09s;
-          animation-duration: 0.09s;
+  -webkit-animation-name: spin-3;
+          animation-name: spin-3;
+  -webkit-animation-duration: 0.03s;
+          animation-duration: 0.03s;
 }
 
 @-webkit-keyframes spin-4 {
@@ -162,10 +162,10 @@
   }
 }
 .god .wrap > .span-4 {
-  -webkit-animation-name: spin-60;
-          animation-name: spin-60;
-  -webkit-animation-duration: 0.12s;
-          animation-duration: 0.12s;
+  -webkit-animation-name: spin-4;
+          animation-name: spin-4;
+  -webkit-animation-duration: 0.04s;
+          animation-duration: 0.04s;
 }
 
 @-webkit-keyframes spin-5 {
@@ -186,10 +186,10 @@
   }
 }
 .god .wrap > .span-5 {
-  -webkit-animation-name: spin-80;
-          animation-name: spin-80;
-  -webkit-animation-duration: 0.15s;
-          animation-duration: 0.15s;
+  -webkit-animation-name: spin-5;
+          animation-name: spin-5;
+  -webkit-animation-duration: 0.05s;
+          animation-duration: 0.05s;
 }
 
 @-webkit-keyframes spin-6 {
@@ -210,10 +210,10 @@
   }
 }
 .god .wrap > .span-6 {
-  -webkit-animation-name: spin-100;
-          animation-name: spin-100;
-  -webkit-animation-duration: 0.18s;
-          animation-duration: 0.18s;
+  -webkit-animation-name: spin-6;
+          animation-name: spin-6;
+  -webkit-animation-duration: 0.06s;
+          animation-duration: 0.06s;
 }
 
 @-webkit-keyframes spin-7 {
@@ -234,10 +234,10 @@
   }
 }
 .god .wrap > .span-7 {
-  -webkit-animation-name: spin-120;
-          animation-name: spin-120;
-  -webkit-animation-duration: 0.21s;
-          animation-duration: 0.21s;
+  -webkit-animation-name: spin-7;
+          animation-name: spin-7;
+  -webkit-animation-duration: 0.07s;
+          animation-duration: 0.07s;
 }
 
 @-webkit-keyframes spin-8 {
@@ -258,10 +258,10 @@
   }
 }
 .god .wrap > .span-8 {
-  -webkit-animation-name: spin-140;
-          animation-name: spin-140;
-  -webkit-animation-duration: 0.24s;
-          animation-duration: 0.24s;
+  -webkit-animation-name: spin-8;
+          animation-name: spin-8;
+  -webkit-animation-duration: 0.08s;
+          animation-duration: 0.08s;
 }
 
 @-webkit-keyframes spin-9 {
@@ -282,10 +282,10 @@
   }
 }
 .god .wrap > .span-9 {
-  -webkit-animation-name: spin-160;
-          animation-name: spin-160;
-  -webkit-animation-duration: 0.27s;
-          animation-duration: 0.27s;
+  -webkit-animation-name: spin-9;
+          animation-name: spin-9;
+  -webkit-animation-duration: 0.09s;
+          animation-duration: 0.09s;
 }
 
 @-webkit-keyframes spin-10 {
@@ -306,10 +306,10 @@
   }
 }
 .god .wrap > .span-10 {
-  -webkit-animation-name: spin-180;
-          animation-name: spin-180;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-name: spin-10;
+          animation-name: spin-10;
+  -webkit-animation-duration: 0.1s;
+          animation-duration: 0.1s;
 }
 
 @-webkit-keyframes spin-11 {
@@ -330,10 +330,10 @@
   }
 }
 .god .wrap > .span-11 {
-  -webkit-animation-name: spin-200;
-          animation-name: spin-200;
-  -webkit-animation-duration: 0.33s;
-          animation-duration: 0.33s;
+  -webkit-animation-name: spin-11;
+          animation-name: spin-11;
+  -webkit-animation-duration: 0.11s;
+          animation-duration: 0.11s;
 }
 
 @-webkit-keyframes spin-12 {
@@ -354,10 +354,10 @@
   }
 }
 .god .wrap > .span-12 {
-  -webkit-animation-name: spin-220;
-          animation-name: spin-220;
-  -webkit-animation-duration: 0.36s;
-          animation-duration: 0.36s;
+  -webkit-animation-name: spin-12;
+          animation-name: spin-12;
+  -webkit-animation-duration: 0.12s;
+          animation-duration: 0.12s;
 }
 
 @-webkit-keyframes spin-13 {
@@ -378,10 +378,10 @@
   }
 }
 .god .wrap > .span-13 {
-  -webkit-animation-name: spin-240;
-          animation-name: spin-240;
-  -webkit-animation-duration: 0.39s;
-          animation-duration: 0.39s;
+  -webkit-animation-name: spin-13;
+          animation-name: spin-13;
+  -webkit-animation-duration: 0.13s;
+          animation-duration: 0.13s;
 }
 
 @-webkit-keyframes spin-14 {
@@ -402,10 +402,10 @@
   }
 }
 .god .wrap > .span-14 {
-  -webkit-animation-name: spin-260;
-          animation-name: spin-260;
-  -webkit-animation-duration: 0.42s;
-          animation-duration: 0.42s;
+  -webkit-animation-name: spin-14;
+          animation-name: spin-14;
+  -webkit-animation-duration: 0.14s;
+          animation-duration: 0.14s;
 }
 
 @-webkit-keyframes spin-15 {
@@ -426,10 +426,10 @@
   }
 }
 .god .wrap > .span-15 {
-  -webkit-animation-name: spin-280;
-          animation-name: spin-280;
-  -webkit-animation-duration: 0.45s;
-          animation-duration: 0.45s;
+  -webkit-animation-name: spin-15;
+          animation-name: spin-15;
+  -webkit-animation-duration: 0.15s;
+          animation-duration: 0.15s;
 }
 
 @-webkit-keyframes spin-16 {
@@ -450,10 +450,10 @@
   }
 }
 .god .wrap > .span-16 {
-  -webkit-animation-name: spin-300;
-          animation-name: spin-300;
-  -webkit-animation-duration: 0.48s;
-          animation-duration: 0.48s;
+  -webkit-animation-name: spin-16;
+          animation-name: spin-16;
+  -webkit-animation-duration: 0.16s;
+          animation-duration: 0.16s;
 }
 
 @-webkit-keyframes spin-17 {
@@ -474,10 +474,10 @@
   }
 }
 .god .wrap > .span-17 {
-  -webkit-animation-name: spin-320;
-          animation-name: spin-320;
-  -webkit-animation-duration: 0.51s;
-          animation-duration: 0.51s;
+  -webkit-animation-name: spin-17;
+          animation-name: spin-17;
+  -webkit-animation-duration: 0.17s;
+          animation-duration: 0.17s;
 }
 
 @-webkit-keyframes spin-18 {
@@ -498,10 +498,10 @@
   }
 }
 .god .wrap > .span-18 {
-  -webkit-animation-name: spin-340;
-          animation-name: spin-340;
-  -webkit-animation-duration: 0.54s;
-          animation-duration: 0.54s;
+  -webkit-animation-name: spin-18;
+          animation-name: spin-18;
+  -webkit-animation-duration: 0.18s;
+          animation-duration: 0.18s;
 }
 
 @-webkit-keyframes spin-19 {
@@ -522,10 +522,10 @@
   }
 }
 .god .wrap > .span-19 {
-  -webkit-animation-name: spin-360;
-          animation-name: spin-360;
-  -webkit-animation-duration: 0.57s;
-          animation-duration: 0.57s;
+  -webkit-animation-name: spin-19;
+          animation-name: spin-19;
+  -webkit-animation-duration: 0.19s;
+          animation-duration: 0.19s;
 }
 
 @-webkit-keyframes spin-20 {
@@ -546,10 +546,10 @@
   }
 }
 .god .wrap > .span-20 {
-  -webkit-animation-name: spin-380;
-          animation-name: spin-380;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
+  -webkit-animation-name: spin-20;
+          animation-name: spin-20;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
 }
 
 @-webkit-keyframes spin-21 {
@@ -570,10 +570,10 @@
   }
 }
 .god .wrap > .span-21 {
-  -webkit-animation-name: spin-400;
-          animation-name: spin-400;
-  -webkit-animation-duration: 0.63s;
-          animation-duration: 0.63s;
+  -webkit-animation-name: spin-21;
+          animation-name: spin-21;
+  -webkit-animation-duration: 0.21s;
+          animation-duration: 0.21s;
 }
 
 @-webkit-keyframes spin-22 {
@@ -594,10 +594,10 @@
   }
 }
 .god .wrap > .span-22 {
-  -webkit-animation-name: spin-420;
-          animation-name: spin-420;
-  -webkit-animation-duration: 0.66s;
-          animation-duration: 0.66s;
+  -webkit-animation-name: spin-22;
+          animation-name: spin-22;
+  -webkit-animation-duration: 0.22s;
+          animation-duration: 0.22s;
 }
 
 @-webkit-keyframes spin-23 {
@@ -618,10 +618,10 @@
   }
 }
 .god .wrap > .span-23 {
-  -webkit-animation-name: spin-440;
-          animation-name: spin-440;
-  -webkit-animation-duration: 0.69s;
-          animation-duration: 0.69s;
+  -webkit-animation-name: spin-23;
+          animation-name: spin-23;
+  -webkit-animation-duration: 0.23s;
+          animation-duration: 0.23s;
 }
 
 @-webkit-keyframes spin-24 {
@@ -642,10 +642,10 @@
   }
 }
 .god .wrap > .span-24 {
-  -webkit-animation-name: spin-460;
-          animation-name: spin-460;
-  -webkit-animation-duration: 0.72s;
-          animation-duration: 0.72s;
+  -webkit-animation-name: spin-24;
+          animation-name: spin-24;
+  -webkit-animation-duration: 0.24s;
+          animation-duration: 0.24s;
 }
 
 @-webkit-keyframes spin-25 {
@@ -666,10 +666,10 @@
   }
 }
 .god .wrap > .span-25 {
-  -webkit-animation-name: spin-480;
-          animation-name: spin-480;
-  -webkit-animation-duration: 0.75s;
-          animation-duration: 0.75s;
+  -webkit-animation-name: spin-25;
+          animation-name: spin-25;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
 }
 
 @-webkit-keyframes spin-26 {
@@ -690,10 +690,10 @@
   }
 }
 .god .wrap > .span-26 {
-  -webkit-animation-name: spin-500;
-          animation-name: spin-500;
-  -webkit-animation-duration: 0.78s;
-          animation-duration: 0.78s;
+  -webkit-animation-name: spin-26;
+          animation-name: spin-26;
+  -webkit-animation-duration: 0.26s;
+          animation-duration: 0.26s;
 }
 
 @-webkit-keyframes spin-27 {
@@ -714,10 +714,10 @@
   }
 }
 .god .wrap > .span-27 {
-  -webkit-animation-name: spin-520;
-          animation-name: spin-520;
-  -webkit-animation-duration: 0.81s;
-          animation-duration: 0.81s;
+  -webkit-animation-name: spin-27;
+          animation-name: spin-27;
+  -webkit-animation-duration: 0.27s;
+          animation-duration: 0.27s;
 }
 
 @-webkit-keyframes spin-28 {
@@ -738,10 +738,10 @@
   }
 }
 .god .wrap > .span-28 {
-  -webkit-animation-name: spin-540;
-          animation-name: spin-540;
-  -webkit-animation-duration: 0.84s;
-          animation-duration: 0.84s;
+  -webkit-animation-name: spin-28;
+          animation-name: spin-28;
+  -webkit-animation-duration: 0.28s;
+          animation-duration: 0.28s;
 }
 
 @-webkit-keyframes spin-29 {
@@ -762,10 +762,10 @@
   }
 }
 .god .wrap > .span-29 {
-  -webkit-animation-name: spin-560;
-          animation-name: spin-560;
-  -webkit-animation-duration: 0.87s;
-          animation-duration: 0.87s;
+  -webkit-animation-name: spin-29;
+          animation-name: spin-29;
+  -webkit-animation-duration: 0.29s;
+          animation-duration: 0.29s;
 }
 
 @-webkit-keyframes spin-30 {
@@ -786,10 +786,10 @@
   }
 }
 .god .wrap > .span-30 {
-  -webkit-animation-name: spin-580;
-          animation-name: spin-580;
-  -webkit-animation-duration: 0.9s;
-          animation-duration: 0.9s;
+  -webkit-animation-name: spin-30;
+          animation-name: spin-30;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 
 @-webkit-keyframes spin-31 {
@@ -810,12 +810,467 @@
   }
 }
 .god .wrap > .span-31 {
-  -webkit-animation-name: spin-600;
-          animation-name: spin-600;
+  -webkit-animation-name: spin-31;
+          animation-name: spin-31;
   -webkit-animation-duration: 0.93s;
           animation-duration: 0.93s;
 }
 
+@-webkit-keyframes spin-32 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 32);
+  }
+}
+
+@keyframes spin-32 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 32);
+  }
+}
+.god .wrap > .span-32 {
+  -webkit-animation-name: spin-32;
+          animation-name: spin-32;
+  -webkit-animation-duration: 0.96s;
+          animation-duration: 0.96s;
+}
+
+@-webkit-keyframes spin-33 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 33);
+  }
+}
+
+@keyframes spin-33 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 33);
+  }
+}
+.god .wrap > .span-33 {
+  -webkit-animation-name: spin-33;
+          animation-name: spin-33;
+  -webkit-animation-duration: 0.99s;
+          animation-duration: 0.99s;
+}
+
+@-webkit-keyframes spin-34 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 34);
+  }
+}
+
+@keyframes spin-34 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 34);
+  }
+}
+.god .wrap > .span-34 {
+  -webkit-animation-name: spin-34;
+          animation-name: spin-34;
+  -webkit-animation-duration: 1.02s;
+          animation-duration: 1.02s;
+}
+
+@-webkit-keyframes spin-35 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 35);
+  }
+}
+
+@keyframes spin-35 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 35);
+  }
+}
+.god .wrap > .span-35 {
+  -webkit-animation-name: spin-35;
+          animation-name: spin-35;
+  -webkit-animation-duration: 1.05s;
+          animation-duration: 1.05s;
+}
+
+@-webkit-keyframes spin-36 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 36);
+  }
+}
+
+@keyframes spin-36 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 36);
+  }
+}
+.god .wrap > .span-36 {
+  -webkit-animation-name: spin-36;
+          animation-name: spin-36;
+  -webkit-animation-duration: 1.08s;
+          animation-duration: 1.08s;
+}
+
+@-webkit-keyframes spin-37 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 37);
+  }
+}
+
+@keyframes spin-37 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 37);
+  }
+}
+.god .wrap > .span-37 {
+  -webkit-animation-name: spin-37;
+          animation-name: spin-37;
+  -webkit-animation-duration: 1.11s;
+          animation-duration: 1.11s;
+}
+
+@-webkit-keyframes spin-38 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 38);
+  }
+}
+
+@keyframes spin-38 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 38);
+  }
+}
+.god .wrap > .span-38 {
+  -webkit-animation-name: spin-38;
+          animation-name: spin-38;
+  -webkit-animation-duration: 1.14s;
+          animation-duration: 1.14s;
+}
+
+@-webkit-keyframes spin-39 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 39);
+  }
+}
+
+@keyframes spin-39 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 39);
+  }
+}
+.god .wrap > .span-39 {
+  -webkit-animation-name: spin-39;
+          animation-name: spin-39;
+  -webkit-animation-duration: 1.17s;
+          animation-duration: 1.17s;
+}
+
+@-webkit-keyframes spin-40 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 40);
+  }
+}
+
+@keyframes spin-40 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 40);
+  }
+}
+.god .wrap > .span-40 {
+  -webkit-animation-name: spin-40;
+          animation-name: spin-40;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+@-webkit-keyframes spin-41 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 41);
+  }
+}
+
+@keyframes spin-41 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 41);
+  }
+}
+.god .wrap > .span-41 {
+  -webkit-animation-name: spin-41;
+          animation-name: spin-41;
+  -webkit-animation-duration: 1.23s;
+          animation-duration: 1.23s;
+}
+
+@-webkit-keyframes spin-42 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 42);
+  }
+}
+
+@keyframes spin-42 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 42);
+  }
+}
+.god .wrap > .span-42 {
+  -webkit-animation-name: spin-42;
+          animation-name: spin-42;
+  -webkit-animation-duration: 1.26s;
+          animation-duration: 1.26s;
+}
+
+@-webkit-keyframes spin-43 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 43);
+  }
+}
+
+@keyframes spin-43 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 43);
+  }
+}
+.god .wrap > .span-43 {
+  -webkit-animation-name: spin-43;
+          animation-name: spin-43;
+  -webkit-animation-duration: 1.29s;
+          animation-duration: 1.29s;
+}
+
+@-webkit-keyframes spin-44 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 44);
+  }
+}
+
+@keyframes spin-44 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 44);
+  }
+}
+.god .wrap > .span-44 {
+  -webkit-animation-name: spin-44;
+          animation-name: spin-44;
+  -webkit-animation-duration: 1.32s;
+          animation-duration: 1.32s;
+}
+
+@-webkit-keyframes spin-45 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 45);
+  }
+}
+
+@keyframes spin-45 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 45);
+  }
+}
+.god .wrap > .span-45 {
+  -webkit-animation-name: spin-45;
+          animation-name: spin-45;
+  -webkit-animation-duration: 1.35s;
+          animation-duration: 1.35s;
+}
+
+@-webkit-keyframes spin-46 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 46);
+  }
+}
+
+@keyframes spin-46 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 46);
+  }
+}
+.god .wrap > .span-46 {
+  -webkit-animation-name: spin-46;
+          animation-name: spin-46;
+  -webkit-animation-duration: 1.38s;
+          animation-duration: 1.38s;
+}
+
+@-webkit-keyframes spin-47 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 47);
+  }
+}
+
+@keyframes spin-47 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 47);
+  }
+}
+.god .wrap > .span-47 {
+  -webkit-animation-name: spin-47;
+          animation-name: spin-47;
+  -webkit-animation-duration: 1.41s;
+          animation-duration: 1.41s;
+}
+
+@-webkit-keyframes spin-48 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 48);
+  }
+}
+
+@keyframes spin-48 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 48);
+  }
+}
+.god .wrap > .span-48 {
+  -webkit-animation-name: spin-48;
+          animation-name: spin-48;
+  -webkit-animation-duration: 1.44s;
+          animation-duration: 1.44s;
+}
+
+@-webkit-keyframes spin-49 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 49);
+  }
+}
+
+@keyframes spin-49 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 49);
+  }
+}
+.god .wrap > .span-49 {
+  -webkit-animation-name: spin-49;
+          animation-name: spin-49;
+  -webkit-animation-duration: 1.47s;
+          animation-duration: 1.47s;
+}
+
+@-webkit-keyframes spin-50 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 50);
+  }
+}
+
+@keyframes spin-50 {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(-73px * 50);
+  }
+}
+.god .wrap > .span-50 {
+  -webkit-animation-name: spin-50;
+          animation-name: spin-50;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
 
 .btns {
   display: flex;
