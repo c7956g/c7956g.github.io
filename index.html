@@ -50,7 +50,11 @@
     <button onclick="startLottery()">開始抽獎</button>
     <div id="result"></div>
     <div id="prizeList"></div>
-
+<!-- 新增是否允許重複抽獎的開關 -->
+    <div id="repeatCheckbox">
+        <label for="allowRepeat">允許重複抽獎：</label>
+        <input type="checkbox" id="allowRepeat" checked>
+    </div>
 
 <!-- 在原有 HTML 文件的 script 標籤中添加以下 JavaScript 部分 -->
 <script>
@@ -99,6 +103,38 @@
         const prizeIndex = Math.floor((degree % 360) / (360 / prizes.length));
         return prizes[prizeIndex];
     }
+
+    function startLottery() {
+            if (spinning) return;
+
+            spinning = true;
+            const wheel = document.getElementById('wheel');
+            const arrow = document.getElementById('arrow');
+            const resultDiv = document.getElementById('result');
+            const prizeListDiv = document.getElementById('prizeList');
+            const allowRepeatCheckbox = document.getElementById('allowRepeat');
+
+            const randomDegree = Math.floor(Math.random() * 360);
+
+            wheel.style.transition = 'transform 3s ease-out';
+            wheel.style.transform = `rotate(${randomDegree}deg)`;
+
+            setTimeout(() => {
+                wheel.style.transition = 'none';
+                arrow.style.transform = `rotate(${randomDegree + 90}deg)`;
+
+                const selectedPrize = getSelectedPrize(randomDegree, prizes);
+
+                resultDiv.innerText = `恭喜你獲得：${selectedPrize}`;
+
+                if (!allowRepeatCheckbox.checked) {
+                    prizes.splice(prizes.indexOf(selectedPrize), 1);
+                    prizeListDiv.innerHTML = `<p>已抽出的獎項：</p><ul>${prizes.map(prize => `<li>${prize}</li>`).join('')}</ul>`;
+                }
+
+                spinning = false;
+            }, 3000);
+        }
 </script>
 
 </body>
