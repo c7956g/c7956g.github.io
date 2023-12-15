@@ -55,7 +55,7 @@
 <body>
 
     <div id="lottery-container">
-        <h1>抽獎結果5：</h1>
+        <h1>抽獎結果6：</h1>
         <div id="-animation"></div>
         <div id="result"></div>
         <div id="selected-prizes">已抽出的獎項：</div>
@@ -67,18 +67,17 @@
 
     <script>
         let allowRepeat = false; // 設定是否允許同一獎項重複抽取
-        let prizes = []; // 獎項數據
         let selectedPrizes = []; // 已抽出的獎項
 
-        async function fetchPrizes() {
-            try {
-                const response = await fetch('prizes.json');
-                const data = await response.json();
-                return data;
-            } catch (error) {
-                console.error('Error fetching prizes:', error);
-            }
-        }
+var prizes;
+
+  // 使用fetch函數加載JSON文件
+  fetch('prizes.json')
+    .then(response => response.json())
+    .then(data => {
+      prizes = data.prizes;
+    })
+    .catch(error => console.error('Error loading prizes:', error));
 
         async function startLottery() {
             // 如果獎項數據為空，則從外部檔案讀取獎項
