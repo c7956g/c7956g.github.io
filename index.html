@@ -68,7 +68,7 @@
 
         async function fetchPrizes() {
             try {
-                const response = await fetch('prizes.json');
+                const response = await fetch('/prizes.json');
                 const data = await response.json();
                 return data;
             } catch (error) {
