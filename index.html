@@ -56,21 +56,22 @@
 
     <div id="lottery-container">
         <center>
-        <img src="birth.jpg" height="300">
+        <img src="birth.jpg" height="400">
         <h1>抽獎結果9：</h1>
         <div id="-animation"></div>
         <div id="result"></div>
         <div id="remaining-prizes">剩餘的獎項數量：</div>
+        <div class="button-container">
+            <button id="start-lottery-button" onclick="startLottery()">開始抽獎</button>
+            <button id="no-repeat-button" onclick="toggleRepeat()">不重複抽獎</button>
+        </div>
         <div id="all-prizes">
             <strong>所有未抽出的獎項：</strong>
             <ul id="remaining-prizes-list"></ul>
             <strong>所有已抽出的獎項：</strong>
             <ul id="selected-prizes-list"></ul>
         </div>
-        <div class="button-container">
-            <button id="start-lottery-button" onclick="startLottery()">開始抽獎</button>
-            <button id="no-repeat-button" onclick="toggleRepeat()">不重複抽獎</button>
-        </div>
+
         </center>
     </div>
 
@@ -126,11 +127,11 @@ var prizes;
                     const selectedPrizesList = document.getElementById("selected-prizes-list");
                     selectedPrizes.push(selectedPrize);
                     selectedPrizesList.innerHTML = selectedPrizes.map(prize => `<li>${prize}</li>`).join('');
-
                     
                     // 清除動畫效果
                     resultElement.style.animation = "";
                     buttonElement.disabled = false; // 恢復按鈕狀態
+                    
                     // 隱藏小鴨跳舞的動畫
                     luckyAnimationElement.innerHTML = '';
 
