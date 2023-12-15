@@ -31,7 +31,7 @@
 <body>
 
     <div id="lottery-container">
-        <h1>抽獎結果1：</h1>
+        <h1>抽獎結果2：</h1>
         <div id="result"></div>
         <div id="selected-prizes">已抽出的獎項：</div>
         <button onclick="startLottery()">開始抽獎</button>
@@ -52,8 +52,9 @@
         }
 
         async function startLottery() {
-            // 從外部檔案讀取獎項
-            const prizes = await fetchPrizes();
+ // 定義獎項
+            const prizes = ["一等獎", "二等獎", "三等獎", "鼓勵獎"];
+
 
             // 隨機選擇一個獎項
             let randomIndex;
