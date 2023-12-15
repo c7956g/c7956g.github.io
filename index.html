@@ -112,6 +112,11 @@ var prizes;
 
                 } else {
                     alert("所有獎項都已經被抽完了！");
+                    // 清除動畫效果
+                    resultElement.style.animation = "";
+                    buttonElement.disabled = false; // 恢復按鈕狀態
+                    // 隱藏小鴨跳舞的動畫
+                    luckyAnimationElement.innerHTML = '';
                 }
 
                 // 等待動畫結束，恢復按鈕狀態
