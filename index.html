@@ -15,7 +15,7 @@
             height: 100px;
             margin:auto
         }
-
+  
         #result {
             font-size: 24px;
             margin-top: 20px;
@@ -53,9 +53,9 @@
     </style>
 </head>
 <body>
-        <center>
+ <center>
     <div id="lottery-container">
-        <img src="birth.jpg" height="400">
+        <img src="birth.jpg" height=“350">
         <h1>抽獎結果6：</h1>
         <div id="-animation"></div>
         <div id="result"></div>
@@ -64,8 +64,8 @@
             <button id="start-lottery-button" onclick="startLottery()">開始抽獎</button>
             <button id="no-repeat-button" onclick="toggleRepeat()">不重複抽獎</button>
         </div>
-        </center>
     </div>
+ </center>
 
     <script>
         let allowRepeat = false; // 設定是否允許同一獎項重複抽取
@@ -111,10 +111,13 @@ var prizes;
                     selectedPrizes.push(selectedPrize);
                     selectedPrizesElement.innerHTML = `已抽出的獎項：${selectedPrizes.join(', ')}`;
 
-                    // 添加旋轉動畫效果
-                    resultElement.style.animation = "rotate 2s ease-in-out";
                 } else {
                     alert("所有獎項都已經被抽完了！");
+                    // 清除動畫效果
+                    resultElement.style.animation = "";
+                    buttonElement.disabled = false; // 恢復按鈕狀態
+                    // 隱藏小鴨跳舞的動畫
+                    luckyAnimationElement.innerHTML = '';
                 }
 
                 // 等待動畫結束，恢復按鈕狀態
