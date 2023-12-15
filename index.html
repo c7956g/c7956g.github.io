@@ -56,8 +56,8 @@
 
     <div id="lottery-container">
         <center>
-        <img src="top-pic">
-        <h1>抽獎結果7：</h1>
+        <img src="birth.jpg">
+        <h1>抽獎結果8：</h1>
         <div id="-animation"></div>
         <div id="result"></div>
         <div id="selected-prizes">已抽出的獎項：</div>
@@ -112,6 +112,11 @@ var prizes;
                     selectedPrizes.push(selectedPrize);
                     selectedPrizesElement.innerHTML = `已抽出的獎項：${selectedPrizes.join(', ')}`;
 
+                    // 顯示剩餘的獎項數量
+                    const remainingPrizesElement = document.getElementById("remaining-prizes");
+                    remainingPrizesElement.innerHTML = `剩餘的獎項數量：${prizes.length}`;
+
+                    
                     // 清除動畫效果
                     resultElement.style.animation = "";
                     buttonElement.disabled = false; // 恢復按鈕狀態
