@@ -56,11 +56,17 @@
 
     <div id="lottery-container">
         <center>
-        <img src="birth.jpg">
-        <h1>抽獎結果8：</h1>
+        <img src="birth.jpg" height="300">
+        <h1>抽獎結果9：</h1>
         <div id="-animation"></div>
         <div id="result"></div>
-        <div id="selected-prizes">已抽出的獎項：</div>
+        <div id="remaining-prizes">剩餘的獎項數量：</div>
+        <div id="all-prizes">
+            <strong>所有未抽出的獎項：</strong>
+            <ul id="remaining-prizes-list"></ul>
+            <strong>所有已抽出的獎項：</strong>
+            <ul id="selected-prizes-list"></ul>
+        </div>
         <div class="button-container">
             <button id="start-lottery-button" onclick="startLottery()">開始抽獎</button>
             <button id="no-repeat-button" onclick="toggleRepeat()">不重複抽獎</button>
@@ -112,9 +118,14 @@ var prizes;
                     selectedPrizes.push(selectedPrize);
                     selectedPrizesElement.innerHTML = `已抽出的獎項：${selectedPrizes.join(', ')}`;
 
-                    // 顯示剩餘的獎項數量
-                    const remainingPrizesElement = document.getElementById("remaining-prizes");
-                    remainingPrizesElement.innerHTML = `剩餘的獎項數量：${prizes.length}`;
+                    // 顯示所有未抽出的獎項
+                    const remainingPrizesList = document.getElementById("remaining-prizes-list");
+                    remainingPrizesList.innerHTML = prizes.map(prize => `<li>${prize}</li>`).join('');
+
+                    // 顯示所有已抽出的獎項
+                    const selectedPrizesList = document.getElementById("selected-prizes-list");
+                    selectedPrizes.push(selectedPrize);
+                    selectedPrizesList.innerHTML = selectedPrizes.map(prize => `<li>${prize}</li>`).join('');
 
                     
                     // 清除動畫效果
