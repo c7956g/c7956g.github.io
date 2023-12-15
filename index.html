@@ -53,25 +53,17 @@
     </style>
 </head>
 <body>
-
-    <div id="lottery-container">
         <center>
+    <div id="lottery-container">
         <img src="birth.jpg" height="400">
-        <h1>抽獎結果9：</h1>
+        <h1>抽獎結果6：</h1>
         <div id="-animation"></div>
         <div id="result"></div>
-        <div id="remaining-prizes">剩餘的獎項數量：</div>
+        <div id="selected-prizes">已抽出的獎項：</div>
         <div class="button-container">
             <button id="start-lottery-button" onclick="startLottery()">開始抽獎</button>
             <button id="no-repeat-button" onclick="toggleRepeat()">不重複抽獎</button>
         </div>
-        <div id="all-prizes">
-            <strong>所有未抽出的獎項：</strong>
-            <ul id="remaining-prizes-list"></ul>
-            <strong>所有已抽出的獎項：</strong>
-            <ul id="selected-prizes-list"></ul>
-        </div>
-
         </center>
     </div>
 
@@ -119,22 +111,8 @@ var prizes;
                     selectedPrizes.push(selectedPrize);
                     selectedPrizesElement.innerHTML = `已抽出的獎項：${selectedPrizes.join(', ')}`;
 
-                    // 顯示所有未抽出的獎項
-                    const remainingPrizesList = document.getElementById("remaining-prizes-list");
-                    remainingPrizesList.innerHTML = prizes.map(prize => `<li>${prize}</li>`).join('');
-
-                    // 顯示所有已抽出的獎項
-                    const selectedPrizesList = document.getElementById("selected-prizes-list");
-                    selectedPrizes.push(selectedPrize);
-                    selectedPrizesList.innerHTML = selectedPrizes.map(prize => `<li>${prize}</li>`).join('');
-                    
-                    // 清除動畫效果
-                    resultElement.style.animation = "";
-                    buttonElement.disabled = false; // 恢復按鈕狀態
-                    
-                    // 隱藏小鴨跳舞的動畫
-                    luckyAnimationElement.innerHTML = '';
-
+                    // 添加旋轉動畫效果
+                    resultElement.style.animation = "rotate 2s ease-in-out";
                 } else {
                     alert("所有獎項都已經被抽完了！");
                 }
