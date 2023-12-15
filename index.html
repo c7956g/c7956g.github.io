@@ -32,6 +32,7 @@
 
     <script>
         let allowRepeat = false; // 設定是否允許同一獎項重複抽取
+        const selectedPrizes = new Set();
 
         async function fetchPrizes() {
             try {
@@ -85,8 +86,6 @@
                 markPrizeAsSelected(randomIndex);
             }
         }
-
-        const selectedPrizes = new Set();
 
         function prizeIsSelected(index) {
             return selectedPrizes.has(index);
