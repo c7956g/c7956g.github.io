@@ -55,8 +55,8 @@
 <body>
 
     <div id="lottery-container">
-        <h1>抽獎結果3：</h1>
-        <div id="lucky-animation"></div>
+        <h1>抽獎結果4：</h1>
+        <div id="-animation"></div>
         <div id="result"></div>
         <div id="selected-prizes">已抽出的獎項：</div>
         <div class="button-container">
@@ -72,7 +72,7 @@
 
         async function fetchPrizes() {
             try {
-                const response = await fetch('https://sheets.googleapis.com/v4/spreadsheets/1zLBJcrXYfj-abbDeCSt6kFNQ8dCCzDGZXXQ6zhkGT-g/values/shops?alt=json&key=AIzaSyAEcc_qI2TNvWuwUZwoWqNkQNq5N9z5TDo');
+                const response = await fetch('/prizes.json');
                 const data = await response.json();
                 return data;
             } catch (error) {
@@ -87,8 +87,8 @@
             }
 
             // 顯示小鴨跳舞的動畫
-            const luckyAnimationElement = document.getElementById("lucky-animation");
-            luckyAnimationElement.innerHTML = '<img src="lucky.gif" alt="lucky Animation">';
+            const AnimationElement = document.getElementById("-animation");
+            AnimationElement.innerHTML = '<img src="lucky.gif" alt="lucky Animation">';
 
             // 避免連續抽獎
             const buttonElement = document.getElementById("start-lottery-button");
