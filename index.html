@@ -15,9 +15,6 @@
             height: 100px;
             margin:auto
         }
-        #top-pic {
-            margin:auto
-        }
 
         #result {
             font-size: 24px;
@@ -58,8 +55,9 @@
 <body>
 
     <div id="lottery-container">
-        <div id="top-pic"></div>
-        <h1>抽獎結果6：</h1>
+        <center>
+        <img src="top-pic">
+        <h1>抽獎結果7：</h1>
         <div id="-animation"></div>
         <div id="result"></div>
         <div id="selected-prizes">已抽出的獎項：</div>
@@ -67,6 +65,7 @@
             <button id="start-lottery-button" onclick="startLottery()">開始抽獎</button>
             <button id="no-repeat-button" onclick="toggleRepeat()">不重複抽獎</button>
         </div>
+        </center>
     </div>
 
     <script>
@@ -113,13 +112,14 @@ var prizes;
                     selectedPrizes.push(selectedPrize);
                     selectedPrizesElement.innerHTML = `已抽出的獎項：${selectedPrizes.join(', ')}`;
 
-                } else {
-                    alert("所有獎項都已經被抽完了！");
                     // 清除動畫效果
                     resultElement.style.animation = "";
                     buttonElement.disabled = false; // 恢復按鈕狀態
                     // 隱藏小鴨跳舞的動畫
                     luckyAnimationElement.innerHTML = '';
+
+                } else {
+                    alert("所有獎項都已經被抽完了！");
                 }
 
                 // 等待動畫結束，恢復按鈕狀態
