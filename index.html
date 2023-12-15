@@ -11,6 +11,7 @@
         }
 
         #lucky-animation {
+            text-align: center;
             width: 100px;
             height: 100px;
             margin-bottom: 20px;
@@ -27,27 +28,28 @@
             color: green;
         }
 
-        button {
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #start-lottery-button, #no-repeat-button {
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
+            border: 2px solid transparent;
+            margin: 0 10px;
+            transition: border-color 0.3s ease-in-out;
         }
 
-        button:hover {
-            background-color: #45a049;
+        #start-lottery-button:hover, #no-repeat-button:hover {
+            border-color: #3498db; /* Change to your desired color */
         }
 
-        button.no-repeat {
-            background-color: #f44336;
-        }
-
-        button.no-repeat:hover {
-            background-color: #d32f2f;
+        #no-repeat-button {
+            font-size: 14px;
         }
     </style>
 </head>
@@ -58,8 +60,10 @@
         <div id="lucky-animation"></div>
         <div id="result"></div>
         <div id="selected-prizes">已抽出的獎項：</div>
-        <button onclick="startLottery()">開始抽獎</button>
-        <button class="no-repeat" onclick="toggleRepeat()">不重複抽獎</button>
+        <div class="button-container">
+            <button id="start-lottery-button" onclick="startLottery()">開始抽獎</button>
+            <button id="no-repeat-button" onclick="toggleRepeat()">不重複抽獎</button>
+        </div>
     </div>
 
     <script>
@@ -76,13 +80,6 @@
             }
         }
 
-        function toggleRepeat() {
-            allowRepeat = !allowRepeat;
-
-            const repeatButton = document.querySelector(".no-repeat");
-            repeatButton.innerText = allowRepeat ? "允許重複抽獎" : "不重複抽獎";
-        }
-
         async function startLottery() {
             // 從外部檔案讀取獎項
             const prizes = await fetchPrizes();
@@ -92,7 +89,7 @@
             luckyAnimationElement.innerHTML = '<img src="lucky.gif" alt="lucky Animation">';
 
             // 避免連續抽獎
-            const buttonElement = document.querySelector("button");
+            const buttonElement = document.getElementById("start-lottery-button");
             buttonElement.disabled = true;
 
             // 等待一段時間，模擬抽獎過程
@@ -142,6 +139,12 @@
                     luckyAnimationElement.innerHTML = '';
                 }, 2000);
             }, 1000);
+        }
+
+        function toggleRepeat() {
+            allowRepeat = !allowRepeat;
+            const noRepeatButton = document.getElementById("no-repeat-button");
+            noRepeatButton.innerText = allowRepeat ? "允許重複抽獎" : "不重複抽獎";
         }
 
         function prizeIsSelected(prize) {
