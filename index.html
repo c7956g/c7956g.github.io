@@ -56,28 +56,20 @@
 
     <div id="lottery-container">
         <body background="birth.jpg">
-        <h1>抽獎結果32：</h1>
+        <h1>抽獎結果30：</h1>
         <div id="-animation"></div>
         <div id="result"></div>
+        <div id="selected-prizes">已抽出的獎項：</div>
         <div class="button-container">
             <button id="start-lottery-button" onclick="startLottery()">開始抽獎</button>
             <button id="no-repeat-button" onclick="toggleRepeat()">不重複抽獎</button>
-        </div>
-        <div id="selected-prizes">已抽出的獎項：</div>
-        <div id="remaining-prizes">剩餘的獎項數量：</div>
-        <div id="all-prizes">
-            <strong>所有未抽出的獎項：</strong>
-            <ul id="remaining-prizes-list"></ul>
-            <strong>所有已抽出的獎項：</strong>
-            <ul id="selected-prizes-list"></ul>
         </div>
     </div>
 
     <script>
         let allowRepeat = false; // 設定是否允許同一獎項重複抽取
         let selectedPrizes = []; // 已抽出的獎項
-        let prizes = []; // 獎項數據
-        
+
 var prizes;
 
   // 使用fetch函數加載JSON文件
@@ -98,6 +90,10 @@ var prizes;
             const AnimationElement = document.getElementById("-animation");
             AnimationElement.innerHTML = '<img src="lucky.gif" alt="lucky Animation">';
 
+            // 避免連續抽獎
+            const buttonElement = document.getElementById("start-lottery-button");
+            buttonElement.disabled = true;
+
             // 等待一段時間，模擬抽獎過程
             setTimeout(() => {
                 if (prizes.length > 0) {
@@ -108,19 +104,11 @@ var prizes;
                     // 顯示抽獎結果
                     const resultElement = document.getElementById("result");
                     resultElement.innerHTML = `恭喜你獲得：${selectedPrize}`;
-                    
-                    // 顯示剩餘的獎項數量
-                    const remainingPrizesElement = document.getElementById("remaining-prizes");
-                    remainingPrizesElement.innerHTML = `剩餘的獎項數量：${prizes.length}`;
 
-                   // 顯示所有未抽出的獎項
-                    const remainingPrizesList = document.getElementById("remaining-prizes-list");
-                    remainingPrizesList.innerHTML = prizes.map(prize => `<li>${prize}</li>`).join('');
-
-                    // 顯示所有已抽出的獎項
-                    const selectedPrizesList = document.getElementById("selected-prizes-list");
+                    // 顯示已抽出的獎項
+                    const selectedPrizesElement = document.getElementById("selected-prizes");
                     selectedPrizes.push(selectedPrize);
-                    selectedPrizesList.innerHTML = selectedPrizes.map(prize => `<li>${prize}</li>`).join('');
+                    selectedPrizesElement.innerHTML = `已抽出的獎項：${selectedPrizes.join(', ')}`;
 
                 } else {
                     alert("所有獎項都已經被抽完了！");
