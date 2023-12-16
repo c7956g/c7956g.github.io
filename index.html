@@ -56,7 +56,7 @@
 
     <div id="lottery-container">
         <body background="birth.jpg">
-        <h1>抽獎結果30：</h1>
+        <h1>抽獎結果31：</h1>
         <div id="-animation"></div>
         <div id="result"></div>
         <div id="selected-prizes">已抽出的獎項：</div>
@@ -89,10 +89,6 @@ var prizes;
             // 顯示小鴨跳舞的動畫
             const AnimationElement = document.getElementById("-animation");
             AnimationElement.innerHTML = '<img src="lucky.gif" alt="lucky Animation">';
-
-            // 避免連續抽獎
-            const buttonElement = document.getElementById("start-lottery-button");
-            buttonElement.disabled = true;
 
             // 等待一段時間，模擬抽獎過程
             setTimeout(() => {
