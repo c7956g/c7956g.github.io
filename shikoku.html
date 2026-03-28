@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>四國 7 日自駕秋旅手冊｜高松・道後・高知</title>
+  <style>
+    :root {
+      --bg1: #fbf6ef;
+      --bg2: #f3ebe1;
+      --paper: rgba(255,255,255,0.94);
+      --card: rgba(255,255,255,0.96);
+      --ink: #32261f;
+      --muted: #7f6a5d;
+      --line: #ead8c9;
+      --green: #566a4d;
+      --green-deep: #384239;
+      --maple: #b85a38;
+      --maple-deep: #8d4028;
+      --gold: #b48a52;
+      --soft: #f8efe6;
+      --soft2: #eef2ea;
+      --shadow: 0 22px 60px rgba(92, 63, 45, 0.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Noto Serif TC", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", serif;
+      line-height: 1.8;
+      background:
+        radial-gradient(circle at top right, rgba(184,90,56,0.10), transparent 26%),
+        radial-gradient(circle at left 20%, rgba(86,106,77,0.08), transparent 24%),
+        linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle at 15% 8%, rgba(184,90,56,.08) 0 2px, transparent 3px),
+        radial-gradient(circle at 85% 18%, rgba(180,138,82,.07) 0 2px, transparent 3px),
+        radial-gradient(circle at 25% 78%, rgba(86,106,77,.07) 0 2px, transparent 3px);
+      opacity: .9;
+    }
+    .wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; position: relative; z-index: 1; }
+    .hero { padding: 42px 0 24px; }
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(252,246,240,.94));
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: 34px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    .hero-card::before, .hero-card::after {
+      content: "🍁";
+      position: absolute;
+      font-size: 72px;
+      opacity: .12;
+    }
+    .hero-card::before { right: 22px; top: 12px; transform: rotate(-10deg); }
+    .hero-card::after { left: 24px; bottom: 6px; transform: rotate(8deg); }
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #f8ecde, #f2e5d3);
+      border: 1px solid #ecd3c3;
+      color: var(--maple-deep);
+      font: 700 13px/1.2 "Noto Sans TC", sans-serif;
+      letter-spacing: .08em;
+    }
+    h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.18;
+    }
+    .sub { margin: 0; color: var(--muted); font-size: 16px; max-width: 920px; }
+    .quick-grid {
+      display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; margin-top: 22px;
+    }
+    .quick {
+      background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(250,245,240,.95));
+      border: 1px solid var(--line); border-radius: 22px; padding: 16px;
+      box-shadow: 0 10px 24px rgba(92,63,45,0.05);
+    }
+    .quick strong { display:block; color: var(--muted); font: 700 12px/1.3 "Noto Sans TC", sans-serif; margin-bottom: 6px; letter-spacing: .04em; }
+    .layout { display:grid; grid-template-columns: 300px minmax(0,1fr); gap:24px; padding: 10px 0 58px; }
+    .side {
+      position: sticky; top: 16px; align-self: start;
+      background: rgba(255,255,255,.9); border:1px solid var(--line); border-radius: 28px; padding: 18px; box-shadow: var(--shadow);
+    }
+    .side h3 { margin: 4px 0 12px; font-size: 17px; }
+    .nav a {
+      display:block; padding: 11px 12px; border-radius: 14px; color: var(--ink); text-decoration: none; margin-bottom: 7px;
+      transition: .18s ease;
+    }
+    .nav a:hover { background: linear-gradient(90deg, #fbf1e7, #f4ede6); transform: translateX(2px); }
+    .tips {
+      margin-top: 16px; padding: 14px; border-radius: 18px; border:1px solid #efd9c5;
+      background: linear-gradient(180deg, #fff5e9, #fff0df); font-size: 14px;
+    }
+    .content { display:flex; flex-direction:column; gap:22px; }
+    details.day {
+      background: linear-gradient(180deg, rgba(255,255,255,.97), rgba(252,248,244,.96));
+      border: 1px solid var(--line); border-radius: 30px; box-shadow: var(--shadow); overflow:hidden;
+    }
+    summary.head {
+      list-style: none; cursor:pointer; position:relative; display:block; padding: 24px 24px 18px;
+      background: linear-gradient(135deg, rgba(255,255,255,.98), rgba(250,244,238,.95));
+    }
+    summary.head::-webkit-details-marker { display:none; }
+    summary.head::after {
+      content: "收合"; position:absolute; right:24px; top:24px;
+      padding: 6px 12px; border-radius:999px; background:#f9ebe1; border:1px solid #efd1bf;
+      color: var(--maple-deep); font: 700 13px/1.2 "Noto Sans TC", sans-serif;
+    }
+    details:not([open]) summary.head::after { content: "展開"; }
+    .badges { margin-bottom: 8px; }
+    .badge {
+      display:inline-block; margin: 0 6px 6px 0; padding: 7px 11px; border-radius:999px;
+      background: linear-gradient(90deg, #edf2ea, #f9efe6); border:1px solid #dfe7de; color: var(--green-deep);
+      font: 700 12px/1.2 "Noto Sans TC", sans-serif;
+    }
+    .title { margin: 0; font-size: 28px; line-height: 1.28; }
+    .subtitle { margin-top: 4px; color: var(--muted); font: 400 14px/1.6 "Noto Sans JP", "Noto Sans TC", sans-serif; }
+    .meta { margin-top: 8px; color: var(--muted); font: 400 14px/1.7 "Noto Sans TC", sans-serif; padding-right: 88px; }
+    .body { padding: 0 24px 24px; }
+    .section { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line); }
+    .section h4 { margin: 0 0 10px; color: var(--green-deep); font-size: 17px; }
+    .grid2 { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:14px; }
+    .list, .timeline { margin:0; padding-left: 20px; }
+    .list li, .timeline li { margin-bottom: 9px; }
+    .navbtn {
+      display:inline-flex; align-items:center; gap:6px; margin-left:8px; padding:4px 10px; border-radius:999px;
+      background: linear-gradient(90deg, #eef3ee, #f7efe6); border:1px solid #d9e4db; color: var(--green-deep); text-decoration:none;
+      font: 700 12px/1.2 "Noto Sans TC", sans-serif;
+    }
+    .jp { color: var(--maple-deep); font-size: 13px; font-family: "Noto Sans JP", "Noto Sans TC", sans-serif; margin-left: 4px; }
+    .cost {
+      margin-top: 12px; padding: 14px 16px; border-radius: 18px; border:1px solid var(--line);
+      background: linear-gradient(180deg, #fffdfa, #faf4ee);
+      font: 400 13px/1.7 "Noto Sans TC", sans-serif; color: var(--muted);
+    }
+    .notes {
+      margin-top: 16px; border:1px solid var(--line); border-radius: 20px; overflow:hidden; background:#fff;
+    }
+    .notes-top {
+      display:flex; justify-content:space-between; align-items:center; gap:10px; padding: 10px 14px;
+      background: linear-gradient(90deg, #f7eee5, #eff3ec); border-bottom:1px solid var(--line);
+      font: 700 14px/1.2 "Noto Sans TC", sans-serif;
+    }
+    .copy-btn, .copy-html-btn, .print-btn {
+      border:1px solid #e2cbbb; background:#fff; color: var(--maple-deep); border-radius:999px; padding: 8px 12px; cursor:pointer;
+      font: 700 13px/1.2 "Noto Sans TC", sans-serif;
+    }
+    textarea {
+      width:100%; min-height: 140px; border:0; resize:vertical; outline:none; padding:14px; font: inherit; color: var(--ink);
+      background: linear-gradient(180deg, #fff, #fffdfa);
+    }
+    .toolbar { display:flex; gap:10px; flex-wrap:wrap; margin-top: 18px; }
+    .tool {
+      border:1px solid #e6d1c1; background: rgba(255,255,255,.92); color: var(--green-deep); border-radius:999px; padding:10px 14px; cursor:pointer;
+      font: 700 13px/1.2 "Noto Sans TC", sans-serif;
+    }
+    .prompt {
+      background: linear-gradient(135deg, #243028, #3b2d26 80%); color:#eef7ef; border-radius:30px; padding:24px; box-shadow: var(--shadow);
+    }
+    .prompt pre {
+      white-space: pre-wrap; word-break: break-word; background: rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.08);
+      border-radius:18px; padding:16px; overflow:auto; color:#eef7ef; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:13px; line-height:1.7;
+    }
+    .html-block { display:none; }
+    @media (max-width: 960px) {
+      .layout { grid-template-columns: 1fr; }
+      .side { position: static; }
+      .quick-grid, .grid2 { grid-template-columns: 1fr; }
+      .meta { padding-right: 0; }
+      summary.head::after { position: static; display:inline-block; margin-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap hero">
+    <div class="hero-card">
+      <span class="eyebrow">AUTUMN DRIVE JOURNAL ・ 可導航・可收合・可加註</span>
+      <h1>四國 7 日自駕秋旅手冊<br>高松・道後・高知</h1>
+      <p class="sub">以高知、道後、高松為主線，依你指定改成第一天從高松機場直接前往松山。整份網頁保留收合功能、Google Maps 導航、每日備註複製，以及可交給 AI 再精修的 HTML 提示詞。</p>
+      <div class="quick-grid">
+        <div class="quick"><strong>航班條件</strong>Day 1 高松機場 15:00 抵達；Day 7 高松機場 11:00 左右離開</div>
+        <div class="quick"><strong>動線</strong>高松機場 → 松山／道後 2晚 → 高知 2晚 → 高松 2晚</div>
+        <div class="quick"><strong>旅遊節奏</strong>以自駕為主，每日通勤以 2 小時內為目標</div>
+        <div class="quick"><strong>秋色重點</strong>寶嚴寺、松山城、牧野植物園、栗林公園</div>
+      </div>
+      <div class="toolbar">
+        <button class="tool" onclick="toggleAll(true)">一鍵展開全部行程</button>
+        <button class="tool" onclick="toggleAll(false)">一鍵收合全部行程</button>
+        <button class="print-btn" onclick="window.print()">列印 / 另存 PDF</button>
+        <button class="copy-html-btn" onclick="copyHtmlPrompt(this)">一鍵複製 HTML 提示詞</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap layout">
+    <aside class="side">
+      <h3>快速導覽</h3>
+      <nav class="nav">
+        <a href="#day1">DAY 1｜高松機場 → 松山・道後</a>
+        <a href="#day2">DAY 2｜松山・道後深度</a>
+        <a href="#day3">DAY 3｜松山 → 高知</a>
+        <a href="#day4">DAY 4｜高知深度</a>
+        <a href="#day5">DAY 5｜高知 → 高松</a>
+        <a href="#day6">DAY 6｜高松深度</a>
+        <a href="#day7">DAY 7｜高松機場回程</a>
+        <a href="#prompt">AI 精修提示詞</a>
+      </nav>
+      <div class="tips">
+        <strong>功能說明</strong><br>
+        1. 每天標題列右上可收合 / 展開。<br>
+        2. 各景點的「導航」可直接開啟 Google Maps。<br>
+        3. 每天底下都有「旅遊備註 / 心得」，並可一鍵複製。<br>
+        4. 最下方保留可交給 AI 再精修的 HTML 提示詞。
+      </div>
+    </aside>
+
+    <main class="content">
+      <details id="day1" class="day" open>
+        <summary class="head">
+          <div class="badges"><span class="badge">DAY 1</span><span class="badge">住：道後溫泉周邊</span><span class="badge">主題：落地直奔松山</span></div>
+          <h2 class="title">高松機場 → 松山・道後溫泉</h2>
+          <div class="subtitle">高松空港（たかまつくうこう）→ 松山（まつやま）・道後温泉（どうごおんせん）</div>
+          <div class="meta">今天不留高松，從機場取車後直接開往松山。這天是全趟較長的一段，但重點就是順利入住、泡湯、吃晚餐。</div>
+        </summary>
+        <div class="body">
+          <div class="section">
+            <h4>精準自駕時間表</h4>
+            <ol class="timeline">
+              <li><strong>15:00–15:30</strong>｜高松機場抵達、取車。</li>
+              <li><strong>15:30</strong>｜出發，建議走高松自動車道 → 松山自動車道。</li>
+              <li><strong>17:40</strong>｜抵達松山市區或道後溫泉旅館附近，車程約 2 小時 10 分。</li>
+              <li><strong>18:10–19:00</strong>｜道後商店街散步。</li>
+              <li><strong>19:00–20:00</strong>｜晚餐。</li>
+            </ol>
+            <div class="cost">高速費與油資會隨租車方案與 ETC 設定不同而有差異，今天以高速移動為主，整體是本趟較長的一段。</div>
+          </div>
+          <div class="section grid2">
+            <div>
+              <h4>景點</h4>
+              <ul class="list">
+                <li><strong>道後溫泉本館</strong><span class="jp">どうごおんせんほんかん</span>｜溫泉區核心。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=道後温泉本館">導航</a></li>
+                <li><strong>道後商店街</strong><span class="jp">どうごしょうてんがい</span>｜適合暖身散步。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=道後商店街">導航</a></li>
+                <li><strong>少爺機關鐘</strong><span class="jp">ぼっちゃんからくり時計</span>｜拍照點。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=坊っちゃんカラクリ時計">導航</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>餐廳（2～3 間）</h4>
+              <ul class="list">
+                <li><strong>かどや 道後店</strong>｜鯛飯名店。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=かどや+道後店">導航</a></li>
+                <li><strong>郷土料理 五志喜</strong><span class="jp">ごしき</span>｜鄉土料理老店。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=五志喜+松山">導航</a></li>
+                <li><strong>道後ぷりん</strong>｜甜點收尾。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=道後ぷりん">導航</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes">
+            <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note1', this)">複製備註</button></div>
+            <textarea id="note1" placeholder="可記錄：實際開車時間、旅館停車狀況、哪家鯛飯最好吃…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <details id="day2" class="day" open>
+        <summary class="head">
+          <div class="badges"><span class="badge">DAY 2</span><span class="badge">住：道後溫泉周邊</span><span class="badge">主題：賞楓＋城下町</span></div>
+          <h2 class="title">松山・道後深度慢遊</h2>
+          <div class="subtitle">松山城（まつやまじょう）・宝厳寺（ほうごんじ）・道後公園（どうごこうえん）</div>
+          <div class="meta">今天專心玩松山與道後，通勤很短。賞楓重點放在松山城與寶嚴寺的大銀杏。</div>
+        </summary>
+        <div class="body">
+          <div class="section">
+            <h4>精準自駕時間表</h4>
+            <ol class="timeline">
+              <li><strong>09:30</strong>｜飯店出發。</li>
+              <li><strong>09:50–11:30</strong>｜松山城。</li>
+              <li><strong>11:45–12:30</strong>｜午餐。</li>
+              <li><strong>13:00–13:40</strong>｜寶嚴寺。</li>
+              <li><strong>14:00–15:00</strong>｜道後公園。</li>
+              <li><strong>15:20–17:00</strong>｜大街道商店街自由散步。</li>
+            </ol>
+            <div class="cost">市區短距離移動為主，整天自駕時間大多在 1 小時內。</div>
+          </div>
+          <div class="section grid2">
+            <div>
+              <h4>景點</h4>
+              <ul class="list">
+                <li><strong>松山城</strong><span class="jp">まつやまじょう</span>｜賞楓重點。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=松山城">導航</a></li>
+                <li><strong>寶嚴寺</strong><span class="jp">ほうごんじ</span>｜大銀杏很有名。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=宝厳寺+松山">導航</a></li>
+                <li><strong>道後公園</strong><span class="jp">どうごこうえん</span>｜秋色散步點。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=道後公園">導航</a></li>
+                <li><strong>大街道商店街</strong><span class="jp">おおかいどうしょうてんがい</span>｜補逛街。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=大街道商店街+松山">導航</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>餐廳（2～3 間）</h4>
+              <ul class="list">
+                <li><strong>大黒屋</strong><span class="jp">だいこくや</span>｜鯛飯名店。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=大黒屋+松山">導航</a></li>
+                <li><strong>郷土料理 かどや</strong>｜道後 / 松山都很適合吃。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=郷土料理+かどや+松山">導航</a></li>
+                <li><strong>もみの木</strong>｜老派洋食感。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=もみの木+松山">導航</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes">
+            <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note2', this)">複製備註</button></div>
+            <textarea id="note2" placeholder="可記錄：松山城纜車等待時間、銀杏狀況、商店街採買…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <details id="day3" class="day" open>
+        <summary class="head">
+          <div class="badges"><span class="badge">DAY 3</span><span class="badge">住：高知市區</span><span class="badge">主題：松山轉高知</span></div>
+          <h2 class="title">松山 → 高知</h2>
+          <div class="subtitle">松山（まつやま）→ 高知（こうち）</div>
+          <div class="meta">今天是第二段跨城移動，抵達高知後以市區景點為主，不再拉太遠。</div>
+        </summary>
+        <div class="body">
+          <div class="section">
+            <h4>精準自駕時間表</h4>
+            <ol class="timeline">
+              <li><strong>09:00</strong>｜松山出發。</li>
+              <li><strong>10:50</strong>｜抵達高知市區，車程約 1 小時 50 分。</li>
+              <li><strong>11:20–12:10</strong>｜午餐。</li>
+              <li><strong>13:00–14:30</strong>｜高知城。</li>
+              <li><strong>15:00–16:00</strong>｜高知城歷史博物館。</li>
+              <li><strong>17:00–19:00</strong>｜弘人市場晚餐。</li>
+            </ol>
+            <div class="cost">今天長距離移動後，市區景點相對集中，總體還在可接受範圍。</div>
+          </div>
+          <div class="section grid2">
+            <div>
+              <h4>景點</h4>
+              <ul class="list">
+                <li><strong>高知城</strong><span class="jp">こうちじょう</span>｜高知代表景點。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=高知城">導航</a></li>
+                <li><strong>高知城歷史博物館</strong><span class="jp">こうちじょう れきしはくぶつかん</span>｜可搭配高知城。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=高知城歴史博物館">導航</a></li>
+                <li><strong>弘人市場</strong><span class="jp">ひろめいちば</span>｜美食核心。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=ひろめ市場">導航</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>餐廳（2～3 間）</h4>
+              <ul class="list">
+                <li><strong>明神丸</strong><span class="jp">みょうじんまる</span>｜鰹魚半敲燒代表。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=明神丸+高知">導航</a></li>
+                <li><strong>やいろ亭</strong><span class="jp">やいろてい</span>｜弘人市場內熱門。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=やいろ亭+高知">導航</a></li>
+                <li><strong>土佐料理 司</strong><span class="jp">とさりょうり つかさ</span>｜想吃完整土佐料理可選。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=土佐料理+司+高知">導航</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes">
+            <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note3', this)">複製備註</button></div>
+            <textarea id="note3" placeholder="可記錄：高知城停車狀況、鰹魚哪一家最好吃、弘人市場人潮…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <details id="day4" class="day" open>
+        <summary class="head">
+          <div class="badges"><span class="badge">DAY 4</span><span class="badge">住：高知市區</span><span class="badge">主題：植物園與海景</span></div>
+          <h2 class="title">高知深度慢遊</h2>
+          <div class="subtitle">牧野植物園（まきのしょくぶつえん）・桂浜（かつらはま）・五台山（ごだいさん）</div>
+          <div class="meta">今天把高知最適合的賞楓點與海景放一起，移動距離短，節奏舒服。</div>
+        </summary>
+        <div class="body">
+          <div class="section">
+            <h4>精準自駕時間表</h4>
+            <ol class="timeline">
+              <li><strong>09:30</strong>｜飯店出發。</li>
+              <li><strong>10:00–12:00</strong>｜牧野植物園。</li>
+              <li><strong>12:20–13:10</strong>｜午餐。</li>
+              <li><strong>13:30–14:00</strong>｜五台山展望台。</li>
+              <li><strong>14:30–16:00</strong>｜桂濱。</li>
+              <li><strong>17:30–19:00</strong>｜回市區晚餐。</li>
+            </ol>
+            <div class="cost">今天市區與近郊移動為主，整天開車量通常在 1 小時上下。</div>
+          </div>
+          <div class="section grid2">
+            <div>
+              <h4>景點</h4>
+              <ul class="list">
+                <li><strong>牧野植物園</strong><span class="jp">まきのしょくぶつえん</span>｜高知最穩的賞楓安排。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=牧野植物園">導航</a></li>
+                <li><strong>五台山展望台</strong><span class="jp">ごだいさん てんぼうだい</span>｜視野很好。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=五台山展望台+高知">導航</a></li>
+                <li><strong>桂濱</strong><span class="jp">かつらはま</span>｜高知經典海景。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=桂浜">導航</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>餐廳（2～3 間）</h4>
+              <ul class="list">
+                <li><strong>西村商店</strong><span class="jp">にしむらしょうてん</span>｜在地定食好評。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=西村商店+高知">導航</a></li>
+                <li><strong>安兵衛</strong><span class="jp">やすべえ</span>｜餃子很有名。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=安兵衛+高知">導航</a></li>
+                <li><strong>藁焼き鰹たたき 明神丸</strong>｜若想再吃一次鰹魚。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=藁焼き鰹たたき+明神丸+高知">導航</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes">
+            <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note4', this)">複製備註</button></div>
+            <textarea id="note4" placeholder="可記錄：植物園楓葉狀況、桂濱風大不大、餐廳排隊時間…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <details id="day5" class="day" open>
+        <summary class="head">
+          <div class="badges"><span class="badge">DAY 5</span><span class="badge">住：高松市區</span><span class="badge">主題：高知回高松</span></div>
+          <h2 class="title">高知 → 高松</h2>
+          <div class="subtitle">高知（こうち）→ 高松（たかまつ）・栗林公園（りつりんこうえん）</div>
+          <div class="meta">為了第七天回程，今天一定要回高松。抵達後以栗林公園與港區、文青區為主。</div>
+        </summary>
+        <div class="body">
+          <div class="section">
+            <h4>精準自駕時間表</h4>
+            <ol class="timeline">
+              <li><strong>09:00</strong>｜高知出發。</li>
+              <li><strong>11:00</strong>｜抵達高松市區，約 2 小時。</li>
+              <li><strong>11:30–12:20</strong>｜午餐。</li>
+              <li><strong>13:00–15:00</strong>｜栗林公園。</li>
+              <li><strong>15:30–16:30</strong>｜北濱 Alley。</li>
+              <li><strong>17:00–18:00</strong>｜高松港散步。</li>
+            </ol>
+            <div class="cost">今天是跨城移動＋市區景點組合，下午改以步調較慢的區域收尾最舒服。</div>
+          </div>
+          <div class="section grid2">
+            <div>
+              <h4>景點</h4>
+              <ul class="list">
+                <li><strong>栗林公園</strong><span class="jp">りつりんこうえん</span>｜高松最重要賞楓點。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=栗林公園">導航</a></li>
+                <li><strong>北濱 Alley</strong><span class="jp">きたはまアリー</span>｜文青感散步點。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=北浜Alley">導航</a></li>
+                <li><strong>高松港</strong><span class="jp">たかまつこう</span>｜海港散步。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=高松港">導航</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>餐廳（2～3 間）</h4>
+              <ul class="list">
+                <li><strong>一鶴 高松店</strong><span class="jp">いっかく</span>｜骨付鳥必吃。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=一鶴+高松">導航</a></li>
+                <li><strong>うどんバカ一代</strong>｜高松人氣烏龍麵。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=うどんバカ一代">導航</a></li>
+                <li><strong>手打十段 うどんバカ一代</strong> 周邊咖啡或北濱咖啡店｜看當天想吃正餐或甜點。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=北浜+カフェ+高松">導航</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes">
+            <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note5', this)">複製備註</button></div>
+            <textarea id="note5" placeholder="可記錄：栗林公園楓況、港區氛圍、骨付鳥鹹度、停車方便度…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <details id="day6" class="day" open>
+        <summary class="head">
+          <div class="badges"><span class="badge">DAY 6</span><span class="badge">住：高松市區</span><span class="badge">主題：高松輕鬆收尾</span></div>
+          <h2 class="title">高松深度慢遊</h2>
+          <div class="subtitle">屋島（やしま）・玉藻公園（たまもこうえん）・商店街（しょうてんがい）</div>
+          <div class="meta">這天以高松近郊與市區為主，給第七天回機場留出很舒服的餘裕。</div>
+        </summary>
+        <div class="body">
+          <div class="section">
+            <h4>精準自駕時間表</h4>
+            <ol class="timeline">
+              <li><strong>09:30</strong>｜飯店出發。</li>
+              <li><strong>10:00–11:30</strong>｜屋島山上展望與屋島寺。</li>
+              <li><strong>12:00–12:50</strong>｜午餐。</li>
+              <li><strong>13:30–14:40</strong>｜玉藻公園。</li>
+              <li><strong>15:00–17:00</strong>｜高松丸龜町商店街散步。</li>
+            </ol>
+            <div class="cost">今天整體開車時間通常不超過 1 小時，屬於完全放鬆版。</div>
+          </div>
+          <div class="section grid2">
+            <div>
+              <h4>景點</h4>
+              <ul class="list">
+                <li><strong>屋島</strong><span class="jp">やしま</span>｜高松近郊經典。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=屋島">導航</a></li>
+                <li><strong>屋島寺</strong><span class="jp">やしまじ</span>｜可一起走。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=屋島寺">導航</a></li>
+                <li><strong>玉藻公園</strong><span class="jp">たまもこうえん</span>｜高松城跡。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=玉藻公園">導航</a></li>
+                <li><strong>高松丸龜町商店街</strong><span class="jp">たかまつ まるがめまち しょうてんがい</span>｜最後採買。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=高松丸亀町商店街">導航</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>餐廳（2～3 間）</h4>
+              <ul class="list">
+                <li><strong>山越うどん</strong><span class="jp">やまこしうどん</span>｜若願意稍微開一點可去。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=山越うどん">導航</a></li>
+                <li><strong>上原屋本店</strong><span class="jp">うえはらや ほんてん</span>｜高松市區也很適合。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=上原屋本店">導航</a></li>
+                <li><strong>一鶴</strong><span class="jp">いっかく</span> 或商店街周邊咖啡館｜補吃想回訪的店。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=一鶴+高松">導航</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes">
+            <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note6', this)">複製備註</button></div>
+            <textarea id="note6" placeholder="可記錄：哪家烏龍麵最喜歡、採買清單、屋島風景、隔天還車提醒…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <details id="day7" class="day" open>
+        <summary class="head">
+          <div class="badges"><span class="badge">DAY 7</span><span class="badge">回程日</span><span class="badge">主題：輕鬆到機場</span></div>
+          <h2 class="title">高松市區 → 高松機場</h2>
+          <div class="subtitle">高松（たかまつ）→ 高松空港（たかまつくうこう）</div>
+          <div class="meta">不再安排景點，保留還車與報到緩衝即可。</div>
+        </summary>
+        <div class="body">
+          <div class="section">
+            <h4>精準自駕時間表</h4>
+            <ol class="timeline">
+              <li><strong>08:20–08:30</strong>｜從高松市區出發。</li>
+              <li><strong>09:00</strong>｜抵達高松機場，預留還車、報到與安檢。</li>
+              <li><strong>11:00 前後</strong>｜班機離開。</li>
+            </ol>
+            <div class="cost">這天只保留移動，不再塞景點最穩。</div>
+          </div>
+          <div class="section grid2">
+            <div>
+              <h4>最後可做的事</h4>
+              <ul class="list">
+                <li>早餐後整理行李。</li>
+                <li>確認 ETC 卡、租車油量、還車流程。</li>
+                <li>機場內補買最後伴手禮。</li>
+              </ul>
+            </div>
+            <div>
+              <h4>最後想吃的 2～3 樣</h4>
+              <ul class="list">
+                <li>高松機場內簡單早餐</li>
+                <li>前一晚先買好的烏龍麵伴手禮</li>
+                <li>骨付鳥或甜點土產</li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes">
+            <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note7', this)">複製備註</button></div>
+            <textarea id="note7" placeholder="可記錄：這趟最喜歡的城市、下次想補的景點、租車心得…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <section id="prompt" class="prompt">
+        <h2>可交給 AI 再精修的 HTML 提示詞</h2>
+        <p>下面這段提示詞可直接交給會產生 HTML 的 AI，進一步美化或延伸功能。</p>
+        <pre id="promptText">請幫我製作一份「日式楓葉風格、排版賞心悅目、可瀏覽、可導航、可自由加上旅遊備註與心得」的四國 7 日自駕行程 HTML 網頁。
+
+【必須包含的功能】
+1. 每天標題列右上可收合 / 展開。
+2. 點各景點的「導航」可直接開啟 Google Maps。
+3. 每天底下都有「旅遊備註 / 心得」，可一鍵複製。
+4. 最下方保留可交給 AI 再精修的 HTML 提示詞。
+5. 整體風格要適合日式楓葉感，米白、楓葉橘棕、深綠、淡金色調，版面像精品旅遊雜誌。
+6. 所有日文漢字要加上平假名。
+7. 每日餐廳要 2～3 間。
+
+【行程主軸】
+- Day 1：高松機場 15:00 抵達後，直接自駕前往松山 / 道後溫泉住宿
+- Day 2：松山・道後深度慢遊
+- Day 3：松山自駕前往高知
+- Day 4：高知深度慢遊
+- Day 5：高知自駕回高松
+- Day 6：高松深度慢遊
+- Day 7：高松機場回程
+
+【內容要求】
+- 每天要有：中文標題、日文標題、當日主題、精準自駕時間表、3～4 個景點、2～3 間餐廳、每日備註區
+- 所有景點都附上 Google Maps 搜尋連結
+- 保留側邊快速導覽
+- 頁首要有一鍵展開全部行程、一鍵收合全部行程、列印 PDF 按鈕
+- 頁面需支援手機與桌機瀏覽
+- 請直接輸出單一完整 HTML 檔案，不要省略內容</pre>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleAll(open) {
+      document.querySelectorAll('details.day').forEach(d => d.open = open);
+    }
+    async function copyNote(id, btn) {
+      const text = document.getElementById(id).value || '';
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (e) {
+        const ta = document.getElementById(id);
+        ta.select();
+        document.execCommand('copy');
+      }
+      const original = btn.textContent;
+      btn.textContent = '已複製';
+      setTimeout(() => btn.textContent = original, 1400);
+    }
+    async function copyHtmlPrompt(btn) {
+      const text = document.getElementById('promptText').innerText;
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (e) {
+        const range = document.createRange();
+        range.selectNode(document.getElementById('promptText'));
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        document.execCommand('copy');
+        sel.removeAllRanges();
+      }
+      const original = btn.textContent;
+      btn.textContent = '已複製 HTML 提示詞';
+      setTimeout(() => btn.textContent = original, 1400);
+    }
+  </script>
+</body>
+</html>

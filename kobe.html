@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>神戶・淡路島・宇治・USJ・有馬溫泉 7日行程手冊</title>
+  <style>
+    :root {
+      --bg: #f7f1ea;
+      --paper: rgba(255,255,255,0.9);
+      --card: rgba(255,255,255,0.94);
+      --ink: #2f241f;
+      --muted: #7d6a5e;
+      --green: #586d4f;
+      --green-deep: #38473a;
+      --gold: #b7904b;
+      --maple: #bf5a36;
+      --maple-deep: #8f3f27;
+      --peach: #f5e1d1;
+      --line: #ead8ca;
+      --soft: #f7efe8;
+      --tag: #f0f4ee;
+      --shadow: 0 22px 60px rgba(94, 62, 43, 0.10);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Noto Serif TC", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", serif;
+      background:
+        radial-gradient(circle at top right, rgba(191,90,54,0.10), transparent 28%),
+        radial-gradient(circle at left 20%, rgba(88,109,79,0.08), transparent 25%),
+        linear-gradient(180deg, #fbf6f0 0%, #f4ede6 45%, #f5f0ea 100%);
+      line-height: 1.78;
+      letter-spacing: .01em;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle at 15% 10%, rgba(191,90,54,.08) 0 2px, transparent 3px),
+        radial-gradient(circle at 80% 20%, rgba(183,144,75,.08) 0 2px, transparent 3px),
+        radial-gradient(circle at 30% 80%, rgba(88,109,79,.08) 0 2px, transparent 3px);
+      opacity: .8;
+    }
+    a { color: var(--green-deep); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container {
+      width: min(1220px, calc(100% - 32px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hero {
+      padding: 54px 0 28px;
+    }
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(255,255,255,.95), rgba(250,244,238,.92));
+      border: 1px solid rgba(255,255,255,.75);
+      backdrop-filter: blur(12px);
+      border-radius: 36px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+    }
+    .hero-card::before,
+    .hero-card::after {
+      content: "🍁";
+      position: absolute;
+      font-size: 72px;
+      opacity: .12;
+      transform: rotate(-12deg);
+    }
+    .hero-card::before { right: 24px; top: 14px; }
+    .hero-card::after { left: 24px; bottom: 10px; transform: rotate(10deg); }
+    .kicker {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #f9ede0, #f3e6d5);
+      color: var(--maple-deep);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      border: 1px solid #ecd5c5;
+    }
+    h1 {
+      margin: 16px 0 12px;
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.18;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    .sub {
+      color: var(--muted);
+      margin: 0;
+      font-size: 16px;
+      max-width: 900px;
+    }
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .quick-item {
+      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(250,246,241,.95));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(94,62,43,0.05);
+    }
+    .quick-item strong {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+      letter-spacing: .05em;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 24px;
+      padding: 18px 0 64px;
+    }
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      align-self: start;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(234,216,202,.85);
+      border-radius: 28px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    .sidebar h3 {
+      margin: 4px 0 12px;
+      font-size: 17px;
+    }
+    .nav a {
+      display: block;
+      padding: 11px 12px;
+      border-radius: 14px;
+      color: var(--ink);
+      margin-bottom: 7px;
+      transition: .2s ease;
+      background: transparent;
+    }
+    .nav a:hover {
+      background: linear-gradient(90deg, #fbf1e8, #f6efe7);
+      text-decoration: none;
+      transform: translateX(2px);
+    }
+    .tips {
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #fff6ea, #fff1df);
+      font-size: 14px;
+      border: 1px solid #f0dcc4;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .day-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(252,248,244,.96));
+      border: 1px solid rgba(234,216,202,.95);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .day-summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 24px 24px 18px;
+      display: block;
+      position: relative;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.98), rgba(250,244,238,.95));
+    }
+    .day-summary::-webkit-details-marker { display: none; }
+    .day-summary::after {
+      content: "收合";
+      position: absolute;
+      right: 24px;
+      top: 24px;
+      font-size: 13px;
+      color: var(--maple-deep);
+      background: #f9ebe1;
+      border: 1px solid #efd2c0;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-family: "Noto Sans TC", sans-serif;
+    }
+    details:not([open]) .day-summary::after { content: "展開"; }
+    .day-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .day-title {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+    .jp-inline {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 14px;
+      color: var(--muted);
+      font-family: "Noto Sans JP", "Noto Sans TC", sans-serif;
+    }
+    .badge {
+      display: inline-block;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #eef2ea, #f8eee5);
+      color: var(--green-deep);
+      font-weight: 700;
+      font-size: 12px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+      border: 1px solid #dde7dc;
+      font-family: "Noto Sans TC", sans-serif;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 10px;
+      padding-right: 90px;
+      font-family: "Noto Sans TC", sans-serif;
+    }
+    .day-body {
+      padding: 0 24px 24px;
+    }
+    .section {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--line);
+    }
+    .section h4 {
+      margin: 0 0 10px;
+      font-size: 17px;
+      color: var(--green-deep);
+    }
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 14px;
+    }
+    .list {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .list li { margin-bottom: 9px; }
+    .timeline {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .timeline li { margin-bottom: 10px; }
+    .cost {
+      background: linear-gradient(180deg, #fffdfa, #faf5ef);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px 16px;
+      margin-top: 12px;
+    }
+    .small {
+      font-size: 13px;
+      color: var(--muted);
+      font-family: "Noto Sans TC", sans-serif;
+    }
+    .jp-name {
+      display: inline-block;
+      margin-left: 4px;
+      color: var(--maple-deep);
+      font-size: 13px;
+      font-family: "Noto Sans JP", "Noto Sans TC", sans-serif;
+    }
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #eef3ee, #f7efe6);
+      border: 1px solid #d9e3da;
+      font-size: 12px;
+      font-family: "Noto Sans TC", sans-serif;
+    }
+    .notes-box {
+      margin-top: 16px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.7);
+    }
+    .notes-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(90deg, #f7eee5, #f1f4ee);
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--line);
+      font-family: "Noto Sans TC", sans-serif;
+    }
+    .notes-top label {
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .copy-btn {
+      border: 1px solid #ddc8b7;
+      background: white;
+      color: var(--maple-deep);
+      border-radius: 999px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      transition: .2s ease;
+    }
+    .copy-btn:hover { transform: translateY(-1px); }
+    textarea {
+      width: 100%;
+      min-height: 140px;
+      border: 0;
+      resize: vertical;
+      padding: 14px;
+      font: inherit;
+      color: var(--ink);
+      outline: none;
+      background: linear-gradient(180deg, #fff, #fffdfa);
+    }
+    .footer-prompt {
+      background: linear-gradient(135deg, #243028, #3b2d26 80%);
+      color: #eef7ef;
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .footer-prompt pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      padding: 16px;
+      overflow: auto;
+      color: #eef7ef;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .tool-btn {
+      border: 1px solid #e6d1c1;
+      background: rgba(255,255,255,.9);
+      color: var(--green-deep);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      transition: .2s ease;
+    }
+    .tool-btn:hover { transform: translateY(-1px); }
+    @media print {
+      body { background: #fff; }
+      .sidebar, .toolbar, .copy-btn { display: none !important; }
+      .layout { display: block; }
+      .day-card, .hero-card, .footer-prompt { box-shadow: none; }
+      details { break-inside: avoid; }
+      details[open] .day-summary::after { display: none; }
+    }
+    @media (max-width: 960px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .quick-grid, .mini-grid { grid-template-columns: 1fr; }
+      .meta { padding-right: 0; }
+      .day-summary::after { position: static; display: inline-block; margin-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container hero">
+    <div class="hero-card">
+      <span class="kicker">AUTUMN JOURNAL ・ 可瀏覽・可導航・可自由加註</span>
+      <h1>神戶・淡路島・宇治・USJ・有馬溫泉<br>7日秋色行程手冊</h1>
+      <p class="sub">升級為更接近精品旅遊雜誌的視覺版，加入楓葉色調、日文景點標示、每日可收合內容與一鍵複製備註功能。第一天已調整為抵達後直接前往淡路島賞夕陽並住宿島上。</p>
+      <div class="quick-grid">
+        <div class="quick-item"><strong>航班條件</strong>星期一 12:30 抵達神戶；第七天 13:30 返程</div>
+        <div class="quick-item"><strong>旅遊節奏</strong>8–10 點出門、20:00 前回飯店為原則，不排太累</div>
+        <div class="quick-item"><strong>住宿策略</strong>第1–2晚淡路島洲本 / 第3–5晚神戶三宮 / 第6晚有馬溫泉</div>
+        <div class="quick-item"><strong>移動方式</strong>淡路島以巴士＋自駕彈性；都市以 JR / 巴士 / Port Liner 為主</div>
+      </div>
+      <div class="toolbar">
+        <button class="tool-btn" onclick="toggleAll(true)">一鍵展開全部行程</button>
+        <button class="tool-btn" onclick="toggleAll(false)">一鍵收合全部行程</button>
+        <button class="tool-btn" onclick="window.print()">列印 / 另存 PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container layout">
+    <aside class="sidebar">
+      <h3>快速導覽</h3>
+      <nav class="nav">
+        <a href="#day1">DAY 1｜神戶機場 → 淡路島夕陽</a>
+        <a href="#day2">DAY 2｜淡路島深度慢遊</a>
+        <a href="#day3">DAY 3｜淡路島 → 神戶三宮</a>
+        <a href="#day4">DAY 4｜宇治一日遊</a>
+        <a href="#day5">DAY 5｜日本環球影城</a>
+        <a href="#day6">DAY 6｜有馬溫泉入住</a>
+        <a href="#day7">DAY 7｜返回神戶機場</a>
+        <a href="#prompt">AI 行程手冊提示詞</a>
+      </nav>
+      <div class="tips">
+        <strong>使用方式</strong><br>
+        1. 每天標題列右上可收合 / 展開。<br>
+        2. 點各景點的「導航」可直接開啟 Google Maps。<br>
+        3. 每天底下都有「旅遊備註 / 心得」，可一鍵複製。<br>
+        4. 最下方保留可交給 AI 再精修的 HTML 提示詞。
+      </div>
+    </aside>
+
+    <main class="content">
+      <details id="day1" class="day-card" open>
+        <summary class="day-summary">
+          <div class="day-head">
+            <div>
+              <div>
+                <span class="badge">DAY 1</span>
+                <span class="badge">住：淡路島洲本</span>
+                <span class="badge">主題：抵達後直接看夕陽</span>
+              </div>
+              <h2 class="day-title">神戶機場 → 三宮 → 淡路島洲本 → 西海岸夕陽</h2>
+              <div class="jp-inline">神戸空港 → 三宮 → 洲本（すもと）→ 西海岸（にしかいがん）の夕景</div>
+            </div>
+          </div>
+          <div class="meta">建議 13:30 左右出關後移動；今天以順利抵達、入住、看夕陽為第一優先，不硬塞過多景點。</div>
+        </summary>
+        <div class="day-body">
+          <div class="section">
+            <h4>精準交通與時間表</h4>
+            <ol class="timeline">
+              <li><strong>13:30–14:00</strong>｜神戶機場出關整理。</li>
+              <li><strong>Port Liner：</strong>建議搭 <strong>14:03 / 14:13 / 14:18 / 14:28</strong> 任一班前往三宮，車程約 <strong>18 分鐘</strong>。</li>
+              <li><strong>高速巴士：</strong>三宮轉乘往洲本巴士中心，建議抓 <strong>15:10 → 16:10</strong> 左右班次，單程約 <strong>60 分鐘</strong>。</li>
+              <li><strong>16:20–17:00</strong>｜飯店 check-in，放行李。</li>
+              <li><strong>17:10–18:30</strong>｜前往海邊或西海岸視野點看夕陽。</li>
+              <li><strong>19:30 前</strong>｜回飯店休息。</li>
+            </ol>
+            <div class="cost small">交通預估：Port Liner 約 ¥340；三宮→洲本高速巴士約 ¥2,270。</div>
+          </div>
+          <div class="section mini-grid">
+            <div>
+              <h4>今天建議景點（3–4 個）</h4>
+              <ul class="list">
+                <li><strong>洲本巴士中心周邊散步</strong><span class="jp-name">洲本バスセンター周辺</span>｜免費｜抵達後最適合暖身。</li>
+                <li><strong>洲本レトロこみち</strong><span class="jp-name">すもとレトロこみち</span>｜大多外部散步免費｜適合傍晚慢慢走。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Sumoto+Retro+Komichi">導航</a></li>
+                <li><strong>大濱海灘 / 大濱公園</strong><span class="jp-name">大浜海岸（おおはまかいがん）/ 大浜公園（おおはまこうえん）</span>｜全天開放｜免費。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Ohama+Beach+Sumoto">導航</a></li>
+                <li><strong>淡路西海岸夕陽視角</strong><span class="jp-name">淡路西海岸（あわじにしかいがん）</span>｜日落前抵達最佳。</li>
+              </ul>
+            </div>
+            <div>
+              <h4>今天值得吃的 3–4 樣</h4>
+              <ul class="list">
+                <li>淡路牛漢堡／淡路牛丼</li>
+                <li>淡路洋蔥湯、洋蔥天婦羅</li>
+                <li>生吻仔魚丼（視店家與季節）</li>
+                <li>淡路牛乳布丁或牛乳霜淇淋</li>
+              </ul>
+            </div>
+          </div>
+          <div class="section mini-grid">
+            <div>
+              <h4>門票 / 營業時間重點</h4>
+              <ul class="list">
+                <li>大濱海灘：全天戶外空間，免費。</li>
+                <li>Retro Komichi：街區全天可走，小店各自營業。</li>
+                <li>今天不建議塞需準時入場的大型設施，以免趕車。</li>
+              </ul>
+            </div>
+            <div>
+              <h4>若有空白時間，可逛哪裡</h4>
+              <ul class="list">
+                <li>以洲本小店、道之駅、伴手禮店為主。</li>
+                <li>今天不建議專程跑大型購物中心，會讓節奏變累。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes-box">
+            <div class="notes-top">
+              <label for="note-day1">旅遊備註 / 心得</label>
+              <button class="copy-btn" type="button" onclick="copyNote('note-day1', this)">複製備註</button>
+            </div>
+            <textarea id="note-day1" placeholder="可記錄：實際搭到的班次、夕陽時間、哪間餐廳最好吃、住宿心得…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <details id="day2" class="day-card" open>
+        <summary class="day-summary">
+          <div class="day-head">
+            <div>
+              <span class="badge">DAY 2</span><span class="badge">住：淡路島洲本</span><span class="badge">主題：淡路島深度慢遊</span>
+              <h2 class="day-title">淡路島一日深度遊｜花景、神社、建築、海岸夕景</h2>
+              <div class="jp-inline">淡路島（あわじしま）｜花・神社（じんじゃ）・建築（けんちく）・海岸線（かいがんせん）</div>
+            </div>
+          </div>
+          <div class="meta">建議 09:00 左右出門。這天最適合租車，停點自由，節奏最漂亮。</div>
+        </summary>
+        <div class="day-body">
+          <div class="section">
+            <h4>建議時程與路程</h4>
+            <ol class="timeline">
+              <li><strong>09:00</strong>｜洲本取車出發。</li>
+              <li><strong>09:40–10:30</strong>｜伊弉諾神宮。</li>
+              <li><strong>11:15–12:30</strong>｜Awaji Hanasajiki。</li>
+              <li><strong>13:00–14:30</strong>｜Awaji Yumebutai 周邊建築散步。</li>
+              <li><strong>15:30–17:30</strong>｜淡路西海岸咖啡 / 看海。</li>
+              <li><strong>18:30–19:30</strong>｜回洲本晚餐、回飯店。</li>
+            </ol>
+            <div class="cost small">花費重點：油資、停車、租車費依車型而異；伊弉諾神宮與 Hanasajiki 可免費參訪。</div>
+          </div>
+          <div class="section mini-grid">
+            <div>
+              <h4>今天景點</h4>
+              <ul class="list">
+                <li><strong>伊弉諾神宮</strong><span class="jp-name">いざなぎじんぐう</span>｜參拜免費｜約 8:30–17:00。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Izanagi+Jingu">導航</a></li>
+                <li><strong>Awaji Hanasajiki</strong><span class="jp-name">あわじ花さじき</span>｜約 9:00–17:00｜免費。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Awaji+Hanasajiki">導航</a></li>
+                <li><strong>Awaji Yumebutai</strong><span class="jp-name">あわじ夢舞台（ゆめぶたい）</span>｜各設施時間不同。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Awaji+Yumebutai">導航</a></li>
+                <li><strong>淡路西海岸海景咖啡帶</strong><span class="jp-name">淡路西海岸（あわじにしかいがん）</span>｜適合收尾看夕陽。</li>
+              </ul>
+            </div>
+            <div>
+              <h4>今天值得吃的東西</h4>
+              <ul class="list">
+                <li>淡路牛漢堡 / 淡路牛咖哩</li>
+                <li>淡路洋蔥天婦羅、洋蔥濃湯</li>
+                <li>海鮮丼或鮮魚定食</li>
+                <li>海景咖啡廳甜點、布丁</li>
+              </ul>
+            </div>
+          </div>
+          <div class="section mini-grid">
+            <div>
+              <h4>門票 / 營業資訊</h4>
+              <ul class="list">
+                <li>伊弉諾神宮：免費參拜，授與所時間依現場為準。</li>
+                <li>Hanasajiki：免費入園，16:30 前入場較穩。</li>
+                <li>Yumebutai：若進個別設施，請依官網當日時間入場。</li>
+              </ul>
+            </div>
+            <div>
+              <h4>若還有空白時間，可逛哪裡</h4>
+              <ul class="list">
+                <li>道之駅東浦<span class="jp-name">みちのえき 東浦（ひがしうら）</span>或在地農產店。</li>
+                <li>購買洋蔥、洋蔥湯包、乳製甜點、果醬類伴手禮。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes-box">
+            <div class="notes-top">
+              <label for="note-day2">旅遊備註 / 心得</label>
+              <button class="copy-btn" type="button" onclick="copyNote('note-day2', this)">複製備註</button>
+            </div>
+            <textarea id="note-day2" placeholder="可記錄：哪個景點最喜歡、停車方便度、咖啡廳景色、伴手禮清單…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <details id="day3" class="day-card" open>
+        <summary class="day-summary">
+          <div class="day-head">
+            <div>
+              <span class="badge">DAY 3</span><span class="badge">住：神戶三宮</span><span class="badge">主題：轉場＋神戶慢遊</span>
+              <h2 class="day-title">淡路島 → 神戶三宮入住｜北野、神社、港區散步</h2>
+              <div class="jp-inline">淡路島 → 神戸三宮（こうべ さんのみや）｜北野（きたの）・神社（じんじゃ）・港（みなと）</div>
+            </div>
+          </div>
+          <div class="meta">第 3–5 晚建議住三宮站東口至 Mint Kobe 一帶，交通最省力。</div>
+        </summary>
+        <div class="day-body">
+          <div class="section">
+            <h4>精準交通與時段</h4>
+            <ol class="timeline">
+              <li><strong>09:30 / 10:00</strong>｜從洲本巴士中心出發前往三宮。</li>
+              <li><strong>約 10:54 / 11:31</strong>｜抵達 Mint Kobe 附近，先寄放行李。</li>
+              <li><strong>12:00–17:30</strong>｜神戶市區慢遊。</li>
+              <li><strong>19:30 前</strong>｜回飯店。</li>
+            </ol>
+            <div class="cost small">交通：洲本→三宮約 ¥2,270；市區可步行＋短程電車或計程車彈性搭配。</div>
+          </div>
+          <div class="section mini-grid">
+            <div>
+              <h4>今天景點</h4>
+              <ul class="list">
+                <li><strong>生田神社</strong><span class="jp-name">いくたじんじゃ</span>｜約 7:00–17:00｜免費。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Ikuta+Jinja">導航</a></li>
+                <li><strong>北野異人館街</strong><span class="jp-name">きたの いじんかんがい</span>｜外部散步為主，免費。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Kitano+Ijinkan">導航</a></li>
+                <li><strong>布引香草園＋纜車</strong><span class="jp-name">布引（ぬのびき）ハーブ園</span>｜依季節調整，來回約 ¥2,000。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Kobe+Nunobiki+Herb+Gardens">導航</a></li>
+                <li><strong>Harborland / umie</strong><span class="jp-name">ハーバーランド / ウミエ</span>｜商場多約 10:00–20:00。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Kobe+Harborland+umie">導航</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>今天值得吃的東西</h4>
+              <ul class="list">
+                <li>神戶牛丼或平價牛排午餐</li>
+                <li>洋食：蛋包飯、漢堡排</li>
+                <li>神戶布丁</li>
+                <li>港區咖啡店甜點</li>
+              </ul>
+            </div>
+          </div>
+          <div class="section mini-grid">
+            <div>
+              <h4>門票 / 營業資訊</h4>
+              <ul class="list">
+                <li>香草園纜車需看當日官網時刻。</li>
+                <li>北野若想進館，請另看各館售票時間。</li>
+                <li>Harborland / umie 夜間餐飲通常比購物區晚關。</li>
+              </ul>
+            </div>
+            <div>
+              <h4>若還有空白時間，可逛哪裡</h4>
+              <ul class="list">
+                <li><strong>Kobe Harborland umie</strong>：最順。</li>
+                <li><strong>Mint Kobe</strong><span class="jp-name">ミント神戸（こうべ）</span>：若不想走太遠，回三宮站旁就能逛。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes-box">
+            <div class="notes-top">
+              <label for="note-day3">旅遊備註 / 心得</label>
+              <button class="copy-btn" type="button" onclick="copyNote('note-day3', this)">複製備註</button>
+            </div>
+            <textarea id="note-day3" placeholder="可記錄：哪一區最有氛圍、纜車值不值得、哪間店要回訪…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <details id="day4" class="day-card" open>
+        <summary class="day-summary">
+          <div class="day-head">
+            <div>
+              <span class="badge">DAY 4</span><span class="badge">住：神戶三宮</span><span class="badge">主題：宇治抹茶與紅葉感</span>
+              <h2 class="day-title">宇治一日遊｜寺院、河岸、博物館、抹茶散步</h2>
+              <div class="jp-inline">宇治（うじ）｜寺院（じいん）・宇治川（うじがわ）・抹茶（まっちゃ）・紅葉（こうよう）</div>
+            </div>
+          </div>
+          <div class="meta">建議約 09:30 前後從三宮出發。以 JR 新快速＋奈良線最穩。</div>
+        </summary>
+        <div class="day-body">
+          <div class="section">
+            <h4>精準交通與時段</h4>
+            <ol class="timeline">
+              <li><strong>09:37 左右</strong>｜三宮出發，JR 新快速往京都方向。</li>
+              <li><strong>約 10:50–11:00</strong>｜京都轉 JR 奈良線。</li>
+              <li><strong>約 11:00–11:15</strong>｜抵達宇治，全程約 1 小時 15 分上下。</li>
+              <li><strong>17:30–18:00</strong>｜搭車返回三宮。</li>
+              <li><strong>19:30 前</strong>｜回到神戶。</li>
+            </ol>
+            <div class="cost small">JR 單程約 ¥1,460，來回約 ¥2,920。</div>
+          </div>
+          <div class="section mini-grid">
+            <div>
+              <h4>今天景點</h4>
+              <ul class="list">
+                <li><strong>平等院</strong><span class="jp-name">びょうどういん</span>｜8:45–17:30｜庭園大人 ¥700，鳳凰堂內部另加 ¥300。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Byodoin+Uji">導航</a></li>
+                <li><strong>宇治上神社</strong><span class="jp-name">うじがみじんじゃ</span>｜約 9:00–16:20｜免費。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Ujigami+Jinja">導航</a></li>
+                <li><strong>宇治市源氏物語博物館</strong><span class="jp-name">うじし げんじものがたりミュージアム</span>｜9:00–17:00｜約 ¥600。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Tale+of+Genji+Museum+Uji">導航</a></li>
+                <li><strong>興聖寺</strong><span class="jp-name">こうしょうじ</span>｜約 5:00–17:00｜拝観料約 ¥500。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Koshoji+Temple+Uji">導航</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>今天值得吃的東西</h4>
+              <ul class="list">
+                <li>抹茶蕎麥麵</li>
+                <li>抹茶聖代</li>
+                <li>抹茶生巧或抹茶大福</li>
+                <li>宇治茶冰淇淋</li>
+              </ul>
+            </div>
+          </div>
+          <div class="section mini-grid">
+            <div>
+              <h4>賞楓重點</h4>
+              <ul class="list">
+                <li>平等院境內秋季楓葉非常適合拍照。</li>
+                <li>宇治川河岸、興聖寺參道都很有秋天氛圍。</li>
+              </ul>
+            </div>
+            <div>
+              <h4>若還有空白時間，可逛哪裡</h4>
+              <ul class="list">
+                <li>回程可逛 <strong>Kyoto Porta</strong><span class="jp-name">京都ポルタ</span>，最順。</li>
+                <li>若想早點回神戶，則回三宮後逛 Mint Kobe 即可。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes-box">
+            <div class="notes-top">
+              <label for="note-day4">旅遊備註 / 心得</label>
+              <button class="copy-btn" type="button" onclick="copyNote('note-day4', this)">複製備註</button>
+            </div>
+            <textarea id="note-day4" placeholder="可記錄：哪家抹茶最喜歡、平等院是否值得加購鳳凰堂、紅葉狀況…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <details id="day5" class="day-card" open>
+        <summary class="day-summary">
+          <div class="day-head">
+            <div>
+              <span class="badge">DAY 5</span><span class="badge">住：神戶三宮</span><span class="badge">主題：USJ 體力日</span>
+              <h2 class="day-title">日本環球影城一整天｜直達巴士最省力</h2>
+              <div class="jp-inline">ユニバーサル・スタジオ・ジャパン｜人気エリア集中日</div>
+            </div>
+          </div>
+          <div class="meta">這天唯一例外，建議比平常更早出門，不然熱門設施排隊時間會拉很長。</div>
+        </summary>
+        <div class="day-body">
+          <div class="section">
+            <h4>精準交通與時段</h4>
+            <ol class="timeline">
+              <li><strong>08:00</strong>｜三宮搭直達巴士前往 USJ。</li>
+              <li><strong>08:38</strong>｜抵達 USJ 周邊。</li>
+              <li><strong>19:10</strong>｜建議搭返程巴士回三宮。</li>
+              <li><strong>19:50</strong>｜抵達三宮，20:00 前可回飯店。</li>
+            </ol>
+            <div class="cost small">USJ 門票、快通價格依日期浮動；請務必再看出發當日官方頁面。</div>
+          </div>
+          <div class="section mini-grid">
+            <div>
+              <h4>今天景點 / 區域</h4>
+              <ul class="list">
+                <li><strong>Super Nintendo World</strong><span class="jp-name">スーパー・ニンテンドー・ワールド</span></li>
+                <li><strong>Wizarding World of Harry Potter</strong><span class="jp-name">ウィザーディング・ワールド・オブ・ハリー・ポッター</span></li>
+                <li><strong>Minion Park</strong><span class="jp-name">ミニオン・パーク</span></li>
+                <li><strong>Jurassic Park / WaterWorld 區</strong><span class="jp-name">ジュラシック・パーク / ウォーターワールド</span></li>
+              </ul>
+            </div>
+            <div>
+              <h4>今天值得吃的東西</h4>
+              <ul class="list">
+                <li>奶油啤酒</li>
+                <li>火雞腿</li>
+                <li>角色聯名零食或爆米花</li>
+                <li>園區限定漢堡 / 咖哩</li>
+              </ul>
+            </div>
+          </div>
+          <div class="section mini-grid">
+            <div>
+              <h4>門票 / 營業資訊</h4>
+              <ul class="list">
+                <li>USJ 開園時間每日不同，務必出發前再次確認。</li>
+                <li>若有買快速通關，請依票面時段安排動線。</li>
+              </ul>
+            </div>
+            <div>
+              <h4>若還有空白時間，可逛哪裡</h4>
+              <ul class="list">
+                <li><strong>Universal Citywalk Osaka</strong><span class="jp-name">ユニバーサル・シティウォーク大阪</span> 最適合。</li>
+                <li>若不想再逛，直接回三宮休息更實際。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes-box">
+            <div class="notes-top">
+              <label for="note-day5">旅遊備註 / 心得</label>
+              <button class="copy-btn" type="button" onclick="copyNote('note-day5', this)">複製備註</button>
+            </div>
+            <textarea id="note-day5" placeholder="可記錄：入園時間、排隊時間、必買商品、哪個設施最值得…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <details id="day6" class="day-card" open>
+        <summary class="day-summary">
+          <div class="day-head">
+            <div>
+              <span class="badge">DAY 6</span><span class="badge">住：有馬溫泉</span><span class="badge">主題：放鬆收尾</span>
+              <h2 class="day-title">三宮 → 有馬溫泉入住｜紅葉、公園、溫泉街、泡湯</h2>
+              <div class="jp-inline">三宮 → 有馬温泉（ありまおんせん）｜紅葉（こうよう）・湯めぐり</div>
+            </div>
+          </div>
+          <div class="meta">今天節奏放最慢，中午前後進溫泉旅館最舒服。</div>
+        </summary>
+        <div class="day-body">
+          <div class="section">
+            <h4>精準交通與時段</h4>
+            <ol class="timeline">
+              <li><strong>10:15</strong>｜三宮巴士總站出發。</li>
+              <li><strong>10:45</strong>｜抵達有馬溫泉。</li>
+              <li><strong>11:00–12:00</strong>｜寄放行李、溫泉街散步。</li>
+              <li><strong>13:00–17:00</strong>｜瑞寶寺公園、金之湯 / 旅館泡湯。</li>
+              <li><strong>18:00–19:30</strong>｜旅館晚餐。</li>
+            </ol>
+            <div class="cost small">三宮→有馬巴士單程約 ¥600 起；溫泉旅館預算可提高。</div>
+          </div>
+          <div class="section mini-grid">
+            <div>
+              <h4>今天景點 / 體驗</h4>
+              <ul class="list">
+                <li><strong>瑞寶寺公園</strong><span class="jp-name">ずいほうじこうえん</span>｜賞楓重點。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Zuihoji+Park+Arima">導航</a></li>
+                <li><strong>金之湯</strong><span class="jp-name">きんのゆ</span>｜公共浴場。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Kin+no+Yu+Arima">導航</a></li>
+                <li><strong>銀之湯</strong><span class="jp-name">ぎんのゆ</span>｜若不想只泡一種湯可考慮。<a class="nav-btn" target="_blank" href="https://maps.google.com/?q=Gin+no+Yu+Arima">導航</a></li>
+                <li><strong>有馬老街散步</strong><span class="jp-name">有馬温泉街（ありまおんせんがい）</span>｜土產、點心、街景最適合慢慢走。</li>
+              </ul>
+            </div>
+            <div>
+              <h4>今天值得吃的東西</h4>
+              <ul class="list">
+                <li>炭酸煎餅</li>
+                <li>神戶牛可樂餅</li>
+                <li>山椒系土產小食</li>
+                <li>溫泉旅館會席料理</li>
+              </ul>
+            </div>
+          </div>
+          <div class="section mini-grid">
+            <div>
+              <h4>門票 / 營業資訊</h4>
+              <ul class="list">
+                <li>瑞寶寺公園以戶外散步為主，白天前往最合適。</li>
+                <li>若選擇太閤之湯日歸，通常約 10:00–22:00。</li>
+                <li>旅館泡湯時間請依入住旅館規則。</li>
+              </ul>
+            </div>
+            <div>
+              <h4>若還有空白時間，可逛哪裡</h4>
+              <ul class="list">
+                <li>今天不建議再跑購物中心。</li>
+                <li>最適合買的是溫泉街伴手禮與點心。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes-box">
+            <div class="notes-top">
+              <label for="note-day6">旅遊備註 / 心得</label>
+              <button class="copy-btn" type="button" onclick="copyNote('note-day6', this)">複製備註</button>
+            </div>
+            <textarea id="note-day6" placeholder="可記錄：旅館泡湯品質、紅葉狀況、哪間土產最好買、晚餐內容…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <details id="day7" class="day-card" open>
+        <summary class="day-summary">
+          <div class="day-head">
+            <div>
+              <span class="badge">DAY 7</span><span class="badge">返程日</span><span class="badge">主題：輕鬆回機場</span>
+              <h2 class="day-title">有馬溫泉 → 三宮 → 神戶機場</h2>
+              <div class="jp-inline">有馬温泉 → 三宮 → 神戸空港（こうべくうこう）</div>
+            </div>
+          </div>
+          <div class="meta">班機 13:30，這天不再安排景點，保留緩衝最重要。</div>
+        </summary>
+        <div class="day-body">
+          <div class="section">
+            <h4>精準交通與時段</h4>
+            <ol class="timeline">
+              <li><strong>10:20</strong>｜有馬溫泉搭巴士前往三宮。</li>
+              <li><strong>10:50</strong>｜抵達三宮。</li>
+              <li><strong>11:03 / 11:08 / 11:10 左右</strong>｜搭 Port Liner 往神戶機場。</li>
+              <li><strong>約 11:21–11:30</strong>｜抵達神戶機場。</li>
+              <li><strong>13:30</strong>｜班機起飛。</li>
+            </ol>
+            <div class="cost small">有馬→三宮巴士＋Port Liner 交通費合計約千円上下，依實際搭乘為準。</div>
+          </div>
+          <div class="section mini-grid">
+            <div>
+              <h4>今天可做的事</h4>
+              <ul class="list">
+                <li>早餐後簡單散步。</li>
+                <li>旅館退房前整理行李與土產。</li>
+                <li>機場內補買最後伴手禮。</li>
+              </ul>
+            </div>
+            <div>
+              <h4>最適合買的東西</h4>
+              <ul class="list">
+                <li>機場伴手禮</li>
+                <li>神戶甜點</li>
+                <li>淡路島洋蔥土產</li>
+                <li>有馬炭酸煎餅</li>
+              </ul>
+            </div>
+          </div>
+          <div class="notes-box">
+            <div class="notes-top">
+              <label for="note-day7">旅遊備註 / 心得</label>
+              <button class="copy-btn" type="button" onclick="copyNote('note-day7', this)">複製備註</button>
+            </div>
+            <textarea id="note-day7" placeholder="可記錄：最後採買清單、最想再去的地方、整趟總結…"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <section id="prompt" class="footer-prompt">
+        <h2>可直接交給 AI 製作精美行程手冊的提示詞</h2>
+        <p>下面這段提示詞已升級為精品旅遊雜誌風格、楓葉秋感、日文標示、每日可收合與複製備註功能需求。</p>
+<pre>請幫我製作一份「高質感、精品旅遊雜誌感、帶有楓葉秋色氛圍、可瀏覽、可導航、可自行加註旅遊備註與心得」的日本關西旅行 HTML 行程手冊。
+
+【輸出格式】
+- 請直接輸出單一完整 HTML 檔案
+- 需包含 CSS 樣式，風格精緻、日系、成熟、有高級感
+- 支援手機與桌機瀏覽
+- 頁面需有固定側邊目錄或頂部快速導覽
+- 每一天的區塊要能快速跳轉
+- 每個景點都要有可點擊的 Google Maps 導航連結
+- 每一天都要有可自由輸入的「旅遊備註 / 心得」欄位，使用 textarea
+- 每一天需支援「單日收合 / 展開」
+- 頁首需有「一鍵展開全部行程」與「一鍵收合全部行程」按鈕
+- 每一天的備註區都要有「複製備註」按鈕
+- 不要使用後端或資料庫，純前端 HTML + CSS + 少量 JavaScript 即可
+- 若可行，請加入「列印成 PDF 也好看」的版型設計
+
+【整體視覺要求】
+- 主色：自然綠、米白、楓葉橘棕、淡金色
+- 風格：精品旅遊雜誌、秋季京都感、清新但成熟、留白漂亮
+- 卡片式排版，圓角、陰影細膩、資訊清楚
+- 可加入淡淡楓葉裝飾元素，但不要太花
+- 字體呈現適合繁體中文閱讀，同時兼顧日文顯示
+- 頁首要有旅程標題、旅遊日期說明區、住宿策略摘要、交通策略摘要
+
+【日文顯示要求】
+- 每個景點名稱都要顯示日文
+- 若景點是漢字，請加上平假名
+- 例如：平等院（びょうどういん）、宇治上神社（うじがみじんじゃ）、瑞寶寺公園（ずいほうじこうえん）
+- 英文園區可補日文片假名名稱
+
+【行程主題】
+神戶進出 7 日遊，節奏輕鬆，不要太累，原則上 8～10 點出門、晚上 8 點前回飯店。
+
+【航班條件】
+- 第一天：星期一 12:30 抵達神戶機場
+- 第七天：13:30 從神戶機場回程
+
+【住宿策略】
+- 第 1～2 晚：住淡路島洲本或洲本巴士中心周邊
+- 第 3～5 晚：住神戶三宮站東口～Mint Kobe 一帶
+- 第 6 晚：住有馬溫泉旅館
+- 一般住宿預算上限：每晚最高 6000 台幣左右
+- 溫泉旅館可提高預算
+
+【旅遊需求】
+- 第一天抵達後，直接去淡路島，看夕陽，並住宿淡路島上
+- 淡路島可安排兩天
+- 都市以大眾運輸為主，較適合自駕的地方可安排自駕
+- 若當天有空白時間，要列出最適合當天去的購物中心或購物地點
+- 每天不能太趕，也不要有太多高風險轉乘
+
+【每天都必須包含】
+1. 當天標題、住宿地點、行程主題
+2. 精準時間軸（包含建議出發時間）
+3. 每段交通方式、路程時間、建議班次時間表
+4. 3～4 個景點
+5. 每個景點的營業時間、門票資訊、是否需要提前注意事項
+6. 每個景點要顯示中文＋日文（漢字加平假名）
+7. 3～4 個值得吃的東西或推薦美食類型
+8. 當天大致花費摘要（交通、門票）
+9. 若有空白時間，列出最適合的 shopping 地點
+10. 每天保留一個可自由書寫備註與心得的區塊
+
+【請依以下內容生成】
+DAY 1｜神戶機場 → 三宮 → 淡路島洲本 → 看夕陽
+DAY 2｜淡路島深度遊
+DAY 3｜淡路島 → 神戶三宮入住
+DAY 4｜宇治一日遊
+DAY 5｜日本環球影城
+DAY 6｜有馬溫泉入住
+DAY 7｜有馬溫泉 → 三宮 → 神戶機場
+
+【額外要求】
+- 請讓每個景點都出現「導航」按鈕，連到 Google Maps 搜尋
+- 請讓每一天底部有「我的備註 / 今日心得」文字區
+- 每一天用 details/summary 或等效互動方式支援收合
+- 備註區要能一鍵複製內容
+- 請讓整份 HTML 看起來像可直接交付的精美行程手冊，而不是普通筆記頁
+- 請不要省略內容，要完整、可直接使用</pre>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleAll(open) {
+      document.querySelectorAll('details.day-card').forEach(d => d.open = open);
+    }
+
+    async function copyNote(id, btn) {
+      const textarea = document.getElementById(id);
+      const text = textarea ? textarea.value : '';
+      try {
+        await navigator.clipboard.writeText(text);
+        const original = btn.textContent;
+        btn.textContent = '已複製';
+        setTimeout(() => btn.textContent = original, 1400);
+      } catch (e) {
+        textarea.select();
+        document.execCommand('copy');
+        const original = btn.textContent;
+        btn.textContent = '已複製';
+        setTimeout(() => btn.textContent = original, 1400);
+      }
+    }
+  </script>
+</body>
+</html>
