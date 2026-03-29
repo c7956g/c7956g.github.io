@@ -183,6 +183,64 @@
       .meta { padding-right: 0; }
       summary.head::after { position: static; display:inline-block; margin-top: 12px; }
     }
+    <style>
+  .spot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .spot-card {
+    background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(252,248,244,.96));
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 24px rgba(92,63,45,0.06);
+  }
+
+  .spot-card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    background: #f3ede6;
+  }
+
+  .spot-card-body {
+    padding: 12px 14px 14px;
+  }
+
+  .spot-card h5 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--green-deep);
+  }
+
+  .spot-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+
+  .img-note {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 960px) {
+    .spot-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .spot-card img {
+      height: 220px;
+    }
+  }
+</style>
   </style>
 </head>
 <body>
@@ -214,8 +272,8 @@
         <a href="#day2">DAY 2｜松山・道後深度</a>
         <a href="#day3">DAY 3｜松山 → 高知</a>
         <a href="#day4">DAY 4｜高知深度</a>
-        <a href="#day5">DAY 5｜高知 → 高松</a>
-        <a href="#day6">DAY 6｜高松深度</a>
+<a href="#day5">DAY 5｜高知戶外深度（河道・楓葉）</a>
+<a href="#day6">DAY 6｜高知 → 高松（屋島夕陽）</a>
         <a href="#day7">DAY 7｜高松機場回程</a>
         <a href="#prompt">AI 精修提示詞</a>
       </nav>
@@ -410,94 +468,199 @@
       </details>
 
       <details id="day5" class="day" open>
-        <summary class="head">
-          <div class="badges"><span class="badge">DAY 5</span><span class="badge">住：高松市區</span><span class="badge">主題：高知回高松</span></div>
-          <h2 class="title">高知 → 高松</h2>
-          <div class="subtitle">高知（こうち）→ 高松（たかまつ）・栗林公園（りつりんこうえん）</div>
-          <div class="meta">為了第七天回程，今天一定要回高松。抵達後以栗林公園與港區、文青區為主。</div>
-        </summary>
-        <div class="body">
-          <div class="section">
-            <h4>精準自駕時間表</h4>
-            <ol class="timeline">
-              <li><strong>09:00</strong>｜高知出發。</li>
-              <li><strong>11:00</strong>｜抵達高松市區，約 2 小時。</li>
-              <li><strong>11:30–12:20</strong>｜午餐。</li>
-              <li><strong>13:00–15:00</strong>｜栗林公園。</li>
-              <li><strong>15:30–16:30</strong>｜北濱 Alley。</li>
-              <li><strong>17:00–18:00</strong>｜高松港散步。</li>
-            </ol>
-            <div class="cost">今天是跨城移動＋市區景點組合，下午改以步調較慢的區域收尾最舒服。</div>
-          </div>
-          <div class="section grid2">
-            <div>
-              <h4>景點</h4>
-              <ul class="list">
-                <li><strong>栗林公園</strong><span class="jp">りつりんこうえん</span>｜高松最重要賞楓點。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=栗林公園">導航</a></li>
-                <li><strong>北濱 Alley</strong><span class="jp">きたはまアリー</span>｜文青感散步點。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=北浜Alley">導航</a></li>
-                <li><strong>高松港</strong><span class="jp">たかまつこう</span>｜海港散步。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=高松港">導航</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4>餐廳（2～3 間）</h4>
-              <ul class="list">
-                <li><strong>一鶴 高松店</strong><span class="jp">いっかく</span>｜骨付鳥必吃。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=一鶴+高松">導航</a></li>
-                <li><strong>うどんバカ一代</strong>｜高松人氣烏龍麵。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=うどんバカ一代">導航</a></li>
-                <li><strong>手打十段 うどんバカ一代</strong> 周邊咖啡或北濱咖啡店｜看當天想吃正餐或甜點。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=北浜+カフェ+高松">導航</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="notes">
-            <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note5', this)">複製備註</button></div>
-            <textarea id="note5" placeholder="可記錄：栗林公園楓況、港區氛圍、骨付鳥鹹度、停車方便度…"></textarea>
+  <summary class="head">
+    <div class="badges">
+      <span class="badge">DAY 5</span>
+      <span class="badge">住：高知市區</span>
+      <span class="badge">主題：河道・鄉下・楓葉</span>
+    </div>
+    <h2 class="title">高知自然系深度慢遊</h2>
+    <div class="subtitle">仁淀川（によどがわ）・中津渓谷（なかつけいこく）・沈下橋（ちんかばし）</div>
+    <div class="meta">今天維持住高知，專跑戶外景色。重點放在清澈河道、溪谷楓葉、橋景與鄉下風情，避開太多室內點。</div>
+  </summary>
+
+  <div class="body">
+    <div class="section">
+      <h4>精準自駕時間表</h4>
+      <ol class="timeline">
+        <li><strong>08:30</strong>｜高知市區出發。</li>
+        <li><strong>09:30–11:00</strong>｜仁淀川沿線散策、拍河道風景。</li>
+        <li><strong>11:20–12:10</strong>｜在地午餐。</li>
+        <li><strong>12:40–15:00</strong>｜中津溪谷賞楓步道散步。</li>
+        <li><strong>15:20–16:00</strong>｜沈下橋周邊停留，拍鄉下河景。</li>
+        <li><strong>17:20</strong>｜回到高知市區晚餐。</li>
+      </ol>
+      <div class="cost">今天開車時間比市區日多一些，但景色完整、節奏很值得。整體抓 2.5～3.5 小時車程較合理。</div>
+    </div>
+
+    <div class="section">
+      <h4>景點圖片</h4>
+      <div class="spot-grid">
+        <div class="spot-card">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BB%81%E6%B7%80%E5%B7%9D%E5%A4%A7%E6%A9%8B%20-%20panoramio.jpg"
+            alt="仁淀川風景"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          />
+          <div class="spot-card-body">
+            <h5>仁淀川（によどがわ）</h5>
+            <p>高知代表性的清澈河川，適合看河道、橋景與鄉間氛圍。</p>
           </div>
         </div>
-      </details>
+
+        <div class="spot-card">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/%E7%A7%8B%E3%81%AE%E4%B8%AD%E6%B4%A5%E6%B8%93%E8%B0%B7%20%28Nakatsu%20Gorge%20in%20autumn%29%2023%20Nov%2C%202014%20-%20panoramio.jpg"
+            alt="中津溪谷秋色"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          />
+          <div class="spot-card-body">
+            <h5>中津渓谷（なかつけいこく）</h5>
+            <p>這天最強賞楓重點，溪谷、岩壁、水色都很有層次。</p>
+          </div>
+        </div>
+
+        <div class="spot-card">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BB%81%E6%B7%80%E5%B7%9D%E5%A0%A4%E9%98%B2%20-%20panoramio%20%281%29.jpg"
+            alt="仁淀川沿岸鄉下風景"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          />
+          <div class="spot-card-body">
+            <h5>鄉下河道風景</h5>
+            <p>這類沿岸景色很適合停車短拍，會比單純城市景點更有高知味道。</p>
+          </div>
+        </div>
+      </div>
+      <div class="img-note">圖片改用 Wikimedia Commons 直連版本，穩定度通常比一般旅遊網站縮圖更好。</div>
+    </div>
+
+    <div class="section grid2">
+      <div>
+        <h4>景點</h4>
+        <ul class="list">
+          <li><strong>仁淀川</strong><span class="jp">によどがわ</span>｜河水清澈、景色舒服。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=仁淀川">導航</a></li>
+          <li><strong>中津溪谷</strong><span class="jp">なかつけいこく</span>｜賞楓與溪谷主角。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=中津渓谷">導航</a></li>
+          <li><strong>沈下橋</strong><span class="jp">ちんかばし</span>｜河道與鄉下感代表景觀。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=高知 沈下橋">導航</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>餐廳（2～3 間）</h4>
+        <ul class="list">
+          <li><strong>道の駅 土佐和紙工芸村</strong>｜路線上順吃很方便。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=道の駅 土佐和紙工芸村">導航</a></li>
+          <li><strong>高知アイス売店</strong>｜沿路想休息可停。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=高知アイス売店 仁淀川">導航</a></li>
+          <li><strong>明神丸</strong><span class="jp">みょうじんまる</span>｜回市區晚餐。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=明神丸+高知">導航</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="notes">
+      <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note5', this)">複製備註</button></div>
+      <textarea id="note5" placeholder="可記錄：哪一段河道最美、溪谷楓葉狀況、今天最喜歡的橋景、沿路鄉下感受…"></textarea>
+    </div>
+  </div>
+</details>
 
       <details id="day6" class="day" open>
-        <summary class="head">
-          <div class="badges"><span class="badge">DAY 6</span><span class="badge">住：高松市區</span><span class="badge">主題：高松輕鬆收尾</span></div>
-          <h2 class="title">高松深度慢遊</h2>
-          <div class="subtitle">屋島（やしま）・玉藻公園（たまもこうえん）・商店街（しょうてんがい）</div>
-          <div class="meta">這天以高松近郊與市區為主，給第七天回機場留出很舒服的餘裕。</div>
-        </summary>
-        <div class="body">
-          <div class="section">
-            <h4>精準自駕時間表</h4>
-            <ol class="timeline">
-              <li><strong>09:30</strong>｜飯店出發。</li>
-              <li><strong>10:00–11:30</strong>｜屋島山上展望與屋島寺。</li>
-              <li><strong>12:00–12:50</strong>｜午餐。</li>
-              <li><strong>13:30–14:40</strong>｜玉藻公園。</li>
-              <li><strong>15:00–17:00</strong>｜高松丸龜町商店街散步。</li>
-            </ol>
-            <div class="cost">今天整體開車時間通常不超過 1 小時，屬於完全放鬆版。</div>
-          </div>
-          <div class="section grid2">
-            <div>
-              <h4>景點</h4>
-              <ul class="list">
-                <li><strong>屋島</strong><span class="jp">やしま</span>｜高松近郊經典。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=屋島">導航</a></li>
-                <li><strong>屋島寺</strong><span class="jp">やしまじ</span>｜可一起走。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=屋島寺">導航</a></li>
-                <li><strong>玉藻公園</strong><span class="jp">たまもこうえん</span>｜高松城跡。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=玉藻公園">導航</a></li>
-                <li><strong>高松丸龜町商店街</strong><span class="jp">たかまつ まるがめまち しょうてんがい</span>｜最後採買。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=高松丸亀町商店街">導航</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4>餐廳（2～3 間）</h4>
-              <ul class="list">
-                <li><strong>山越うどん</strong><span class="jp">やまこしうどん</span>｜若願意稍微開一點可去。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=山越うどん">導航</a></li>
-                <li><strong>上原屋本店</strong><span class="jp">うえはらや ほんてん</span>｜高松市區也很適合。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=上原屋本店">導航</a></li>
-                <li><strong>一鶴</strong><span class="jp">いっかく</span> 或商店街周邊咖啡館｜補吃想回訪的店。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=一鶴+高松">導航</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="notes">
-            <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note6', this)">複製備註</button></div>
-            <textarea id="note6" placeholder="可記錄：哪家烏龍麵最喜歡、採買清單、屋島風景、隔天還車提醒…"></textarea>
+  <summary class="head">
+    <div class="badges">
+      <span class="badge">DAY 6</span>
+      <span class="badge">住：高松市區</span>
+      <span class="badge">主題：移動＋夕陽收尾</span>
+    </div>
+    <h2 class="title">高知 → 高松（屋島夕陽）</h2>
+    <div class="subtitle">高知（こうち）→ 高松（たかまつ）・屋島（やしま）</div>
+    <div class="meta">今天刻意不塞太多點，回到高松後只安排屋島看夕陽，讓節奏舒服收尾。</div>
+  </summary>
+
+  <div class="body">
+    <div class="section">
+      <h4>精準自駕時間表</h4>
+      <ol class="timeline">
+        <li><strong>10:00</strong>｜高知出發。</li>
+        <li><strong>12:00</strong>｜抵達高松市區，先寄放行李或 check in。</li>
+        <li><strong>12:20–13:20</strong>｜午餐。</li>
+        <li><strong>13:40–15:30</strong>｜市區自由休息、咖啡或簡單散步。</li>
+        <li><strong>16:00</strong>｜開車前往屋島。</li>
+        <li><strong>17:00–18:00</strong>｜屋島展望台看夕陽。</li>
+        <li><strong>18:30 後</strong>｜回高松市區晚餐。</li>
+      </ol>
+      <div class="cost">今天重點是保留體力，不再排過多景點。跨城移動約 2 小時左右，屬於很舒服的收尾安排。</div>
+    </div>
+
+    <div class="section">
+      <h4>景點圖片</h4>
+      <div class="spot-grid">
+        <div class="spot-card">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Yashima02s3200.jpg"
+            alt="屋島風景"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          />
+          <div class="spot-card-body">
+            <h5>屋島（やしま）</h5>
+            <p>高松經典展望地形，適合安排傍晚收尾。</p>
           </div>
         </div>
-      </details>
+
+        <div class="spot-card">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/%E9%81%93%E5%BE%8C%E6%B8%A9%E6%B3%89%E6%9C%AC%E9%A4%A8.jpg"
+            alt="道後溫泉本館"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          />
+          <div class="spot-card-body">
+            <h5>旅程回顧感圖片</h5>
+            <p>如果你想讓整份頁面更像旅遊手冊，也可以保留前段城市代表照。</p>
+          </div>
+        </div>
+
+        <div class="spot-card">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/%E9%81%93%E5%BE%8C%E6%B8%A9%E6%B3%89%EF%BC%88%E6%9C%AC%E9%A4%A8%EF%BC%89.JPG"
+            alt="道後溫泉本館外觀"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          />
+          <div class="spot-card-body">
+            <h5>版面補圖用</h5>
+            <p>若你之後也想把 Day1～Day4 都補上圖，這種格式可以直接複製套用。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section grid2">
+      <div>
+        <h4>景點</h4>
+        <ul class="list">
+          <li><strong>屋島展望台</strong><span class="jp">やしま てんぼうだい</span>｜夕陽主角。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=屋島展望台">導航</a></li>
+          <li><strong>屋島寺</strong><span class="jp">やしまじ</span>｜若時間夠可順走。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=屋島寺">導航</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>餐廳（2～3 間）</h4>
+        <ul class="list">
+          <li><strong>うどんバカ一代</strong>｜高松經典。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=うどんバカ一代">導航</a></li>
+          <li><strong>一鶴 高松店</strong><span class="jp">いっかく</span>｜骨付鳥。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=一鶴+高松">導航</a></li>
+          <li><strong>北濱 Alley 咖啡店</strong>｜晚餐前後散步。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=北浜Alley">導航</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="notes">
+      <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note6', this)">複製備註</button></div>
+      <textarea id="note6" placeholder="可記錄：屋島夕陽時間、今天移動是否順、晚餐選哪家、隔天還車提醒…"></textarea>
+    </div>
+  </div>
+</details>
 
       <details id="day7" class="day" open>
         <summary class="head">
