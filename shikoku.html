@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>四國 7 日自駕秋旅手冊｜高松・道後・高知</title>
+  <title>四國 7 日自駕秋旅手冊｜高松・道後・高知｜圖片版</title>
   <style>
     :root {
-      --bg1: #f4cccc;
+      --bg1: #fbf6ef;
       --bg2: #f3ebe1;
       --paper: rgba(255,255,255,0.94);
       --card: rgba(255,255,255,0.96);
@@ -22,8 +22,10 @@
       --soft2: #eef2ea;
       --shadow: 0 22px 60px rgba(92, 63, 45, 0.10);
     }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       color: var(--ink);
@@ -34,6 +36,7 @@
         radial-gradient(circle at left 20%, rgba(86,106,77,0.08), transparent 24%),
         linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
     }
+
     body::before {
       content: "";
       position: fixed;
@@ -45,8 +48,10 @@
         radial-gradient(circle at 25% 78%, rgba(86,106,77,.07) 0 2px, transparent 3px);
       opacity: .9;
     }
+
     .wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; position: relative; z-index: 1; }
     .hero { padding: 42px 0 24px; }
+
     .hero-card {
       position: relative;
       overflow: hidden;
@@ -57,6 +62,7 @@
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
     }
+
     .hero-card::before, .hero-card::after {
       content: "🍁";
       position: absolute;
@@ -65,6 +71,7 @@
     }
     .hero-card::before { right: 22px; top: 12px; transform: rotate(-10deg); }
     .hero-card::after { left: 24px; bottom: 6px; transform: rotate(8deg); }
+
     .eyebrow {
       display: inline-block;
       padding: 7px 14px;
@@ -75,186 +82,397 @@
       font: 700 13px/1.2 "Noto Sans TC", sans-serif;
       letter-spacing: .08em;
     }
+
     h1 {
       margin: 16px 0 10px;
       font-size: clamp(30px, 4vw, 50px);
       line-height: 1.18;
     }
-    .sub { margin: 0; color: var(--muted); font-size: 16px; max-width: 920px; }
-    .quick-grid {
-      display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; margin-top: 22px;
+
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 920px;
     }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
     .quick {
       background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(250,245,240,.95));
-      border: 1px solid var(--line); border-radius: 22px; padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 16px;
       box-shadow: 0 10px 24px rgba(92,63,45,0.05);
     }
-    .quick strong { display:block; color: var(--muted); font: 700 12px/1.3 "Noto Sans TC", sans-serif; margin-bottom: 6px; letter-spacing: .04em; }
-    .layout { display:grid; grid-template-columns: 300px minmax(0,1fr); gap:24px; padding: 10px 0 58px; }
-    .side {
-      position: sticky; top: 16px; align-self: start;
-      background: rgba(255,255,255,.9); border:1px solid var(--line); border-radius: 28px; padding: 18px; box-shadow: var(--shadow);
+
+    .quick strong {
+      display:block;
+      color: var(--muted);
+      font: 700 12px/1.3 "Noto Sans TC", sans-serif;
+      margin-bottom: 6px;
+      letter-spacing: .04em;
     }
+
+    .layout {
+      display:grid;
+      grid-template-columns: 300px minmax(0,1fr);
+      gap:24px;
+      padding: 10px 0 58px;
+    }
+
+    .side {
+      position: sticky;
+      top: 16px;
+      align-self: start;
+      background: rgba(255,255,255,.9);
+      border:1px solid var(--line);
+      border-radius: 28px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
     .side h3 { margin: 4px 0 12px; font-size: 17px; }
+
     .nav a {
-      display:block; padding: 11px 12px; border-radius: 14px; color: var(--ink); text-decoration: none; margin-bottom: 7px;
+      display:block;
+      padding: 11px 12px;
+      border-radius: 14px;
+      color: var(--ink);
+      text-decoration: none;
+      margin-bottom: 7px;
       transition: .18s ease;
     }
-    .nav a:hover { background: linear-gradient(90deg, #fbf1e7, #f4ede6); transform: translateX(2px); }
-    .tips {
-      margin-top: 16px; padding: 14px; border-radius: 18px; border:1px solid #efd9c5;
-      background: linear-gradient(180deg, #fff5e9, #fff0df); font-size: 14px;
+
+    .nav a:hover {
+      background: linear-gradient(90deg, #fbf1e7, #f4ede6);
+      transform: translateX(2px);
     }
+
+    .tips {
+      margin-top: 16px;
+      padding: 14px;
+      border-radius: 18px;
+      border:1px solid #efd9c5;
+      background: linear-gradient(180deg, #fff5e9, #fff0df);
+      font-size: 14px;
+    }
+
     .content { display:flex; flex-direction:column; gap:22px; }
+
     details.day {
       background: linear-gradient(180deg, rgba(255,255,255,.97), rgba(252,248,244,.96));
-      border: 1px solid var(--line); border-radius: 30px; box-shadow: var(--shadow); overflow:hidden;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
     }
+
     summary.head {
-      list-style: none; cursor:pointer; position:relative; display:block; padding: 24px 24px 18px;
+      list-style: none;
+      cursor:pointer;
+      position:relative;
+      display:block;
+      padding: 24px 24px 18px;
       background: linear-gradient(135deg, rgba(255,255,255,.98), rgba(250,244,238,.95));
     }
+
     summary.head::-webkit-details-marker { display:none; }
+
     summary.head::after {
-      content: "收合"; position:absolute; right:24px; top:24px;
-      padding: 6px 12px; border-radius:999px; background:#f9ebe1; border:1px solid #efd1bf;
-      color: var(--maple-deep); font: 700 13px/1.2 "Noto Sans TC", sans-serif;
+      content: "收合";
+      position:absolute;
+      right:24px;
+      top:24px;
+      padding: 6px 12px;
+      border-radius:999px;
+      background:#f9ebe1;
+      border:1px solid #efd1bf;
+      color: var(--maple-deep);
+      font: 700 13px/1.2 "Noto Sans TC", sans-serif;
     }
+
     details:not([open]) summary.head::after { content: "展開"; }
+
     .badges { margin-bottom: 8px; }
+
     .badge {
-      display:inline-block; margin: 0 6px 6px 0; padding: 7px 11px; border-radius:999px;
-      background: linear-gradient(90deg, #edf2ea, #f9efe6); border:1px solid #dfe7de; color: var(--green-deep);
+      display:inline-block;
+      margin: 0 6px 6px 0;
+      padding: 7px 11px;
+      border-radius:999px;
+      background: linear-gradient(90deg, #edf2ea, #f9efe6);
+      border:1px solid #dfe7de;
+      color: var(--green-deep);
       font: 700 12px/1.2 "Noto Sans TC", sans-serif;
     }
+
     .title { margin: 0; font-size: 28px; line-height: 1.28; }
-    .subtitle { margin-top: 4px; color: var(--muted); font: 400 14px/1.6 "Noto Sans JP", "Noto Sans TC", sans-serif; }
-    .meta { margin-top: 8px; color: var(--muted); font: 400 14px/1.7 "Noto Sans TC", sans-serif; padding-right: 88px; }
+    .subtitle {
+      margin-top: 4px;
+      color: var(--muted);
+      font: 400 14px/1.6 "Noto Sans JP", "Noto Sans TC", sans-serif;
+    }
+
+    .meta {
+      margin-top: 8px;
+      color: var(--muted);
+      font: 400 14px/1.7 "Noto Sans TC", sans-serif;
+      padding-right: 88px;
+    }
+
     .body { padding: 0 24px 24px; }
-    .section { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line); }
-    .section h4 { margin: 0 0 10px; color: var(--green-deep); font-size: 17px; }
-    .grid2 { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:14px; }
-    .list, .timeline { margin:0; padding-left: 20px; }
+
+    .section {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--line);
+    }
+
+    .section h4 {
+      margin: 0 0 10px;
+      color: var(--green-deep);
+      font-size: 17px;
+    }
+
+    .grid2 {
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:14px;
+    }
+
+    .list, .timeline {
+      margin:0;
+      padding-left: 20px;
+    }
+
     .list li, .timeline li { margin-bottom: 9px; }
+
     .navbtn {
-      display:inline-flex; align-items:center; gap:6px; margin-left:8px; padding:4px 10px; border-radius:999px;
-      background: linear-gradient(90deg, #eef3ee, #f7efe6); border:1px solid #d9e4db; color: var(--green-deep); text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-left:8px;
+      padding:4px 10px;
+      border-radius:999px;
+      background: linear-gradient(90deg, #eef3ee, #f7efe6);
+      border:1px solid #d9e4db;
+      color: var(--green-deep);
+      text-decoration:none;
       font: 700 12px/1.2 "Noto Sans TC", sans-serif;
     }
-    .jp { color: var(--maple-deep); font-size: 13px; font-family: "Noto Sans JP", "Noto Sans TC", sans-serif; margin-left: 4px; }
+
+    .jp {
+      color: var(--maple-deep);
+      font-size: 13px;
+      font-family: "Noto Sans JP", "Noto Sans TC", sans-serif;
+      margin-left: 4px;
+    }
+
     .cost {
-      margin-top: 12px; padding: 14px 16px; border-radius: 18px; border:1px solid var(--line);
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border:1px solid var(--line);
       background: linear-gradient(180deg, #fffdfa, #faf4ee);
-      font: 400 13px/1.7 "Noto Sans TC", sans-serif; color: var(--muted);
+      font: 400 13px/1.7 "Noto Sans TC", sans-serif;
+      color: var(--muted);
     }
+
     .notes {
-      margin-top: 16px; border:1px solid var(--line); border-radius: 20px; overflow:hidden; background:#fff;
+      margin-top: 16px;
+      border:1px solid var(--line);
+      border-radius: 20px;
+      overflow:hidden;
+      background:#fff;
     }
+
     .notes-top {
-      display:flex; justify-content:space-between; align-items:center; gap:10px; padding: 10px 14px;
-      background: linear-gradient(90deg, #f7eee5, #eff3ec); border-bottom:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      padding: 10px 14px;
+      background: linear-gradient(90deg, #f7eee5, #eff3ec);
+      border-bottom:1px solid var(--line);
       font: 700 14px/1.2 "Noto Sans TC", sans-serif;
     }
+
     .copy-btn, .copy-html-btn, .print-btn {
-      border:1px solid #e2cbbb; background:#fff; color: var(--maple-deep); border-radius:999px; padding: 8px 12px; cursor:pointer;
+      border:1px solid #e2cbbb;
+      background:#fff;
+      color: var(--maple-deep);
+      border-radius:999px;
+      padding: 8px 12px;
+      cursor:pointer;
       font: 700 13px/1.2 "Noto Sans TC", sans-serif;
     }
+
     textarea {
-      width:100%; min-height: 140px; border:0; resize:vertical; outline:none; padding:14px; font: inherit; color: var(--ink);
+      width:100%;
+      min-height: 140px;
+      border:0;
+      resize:vertical;
+      outline:none;
+      padding:14px;
+      font: inherit;
+      color: var(--ink);
       background: linear-gradient(180deg, #fff, #fffdfa);
     }
-    .toolbar { display:flex; gap:10px; flex-wrap:wrap; margin-top: 18px; }
+
+    .toolbar {
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top: 18px;
+    }
+
     .tool {
-      border:1px solid #e6d1c1; background: rgba(255,255,255,.92); color: var(--green-deep); border-radius:999px; padding:10px 14px; cursor:pointer;
+      border:1px solid #e6d1c1;
+      background: rgba(255,255,255,.92);
+      color: var(--green-deep);
+      border-radius:999px;
+      padding:10px 14px;
+      cursor:pointer;
       font: 700 13px/1.2 "Noto Sans TC", sans-serif;
     }
+
     .prompt {
-      background: linear-gradient(135deg, #243028, #3b2d26 80%); color:#eef7ef; border-radius:30px; padding:24px; box-shadow: var(--shadow);
+      background: linear-gradient(135deg, #243028, #3b2d26 80%);
+      color:#eef7ef;
+      border-radius:30px;
+      padding:24px;
+      box-shadow: var(--shadow);
     }
+
     .prompt pre {
-      white-space: pre-wrap; word-break: break-word; background: rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.08);
-      border-radius:18px; padding:16px; overflow:auto; color:#eef7ef; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:13px; line-height:1.7;
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      padding:16px;
+      overflow:auto;
+      color:#eef7ef;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size:13px;
+      line-height:1.7;
     }
-    .html-block { display:none; }
-    @media (max-width: 960px) {
-      .layout { grid-template-columns: 1fr; }
-      .side { position: static; }
-      .quick-grid, .grid2 { grid-template-columns: 1fr; }
-      .meta { padding-right: 0; }
-      summary.head::after { position: static; display:inline-block; margin-top: 12px; }
-    }
-    <style>
-  .spot-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    gap: 14px;
-    margin-top: 14px;
-  }
 
-  .spot-card {
-    background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(252,248,244,.96));
-    border: 1px solid var(--line);
-    border-radius: 22px;
-    overflow: hidden;
-    box-shadow: 0 10px 24px rgba(92,63,45,0.06);
-  }
-
-  .spot-card img {
-    display: block;
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-    background: #f3ede6;
-  }
-
-  .spot-card-body {
-    padding: 12px 14px 14px;
-  }
-
-  .spot-card h5 {
-    margin: 0 0 4px;
-    font-size: 15px;
-    line-height: 1.5;
-    color: var(--green-deep);
-  }
-
-  .spot-card p {
-    margin: 0;
-    font-size: 13px;
-    line-height: 1.7;
-    color: var(--muted);
-  }
-
-  .img-note {
-    margin-top: 8px;
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  @media (max-width: 960px) {
     .spot-grid {
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .spot-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(252,248,244,.96));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(92,63,45,0.06);
+      position: relative;
     }
 
     .spot-card img {
-      height: 220px;
+      display: block;
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      background: #f3ede6;
     }
-  }
-</style>
+
+    .spot-card-body {
+      padding: 12px 14px 14px;
+    }
+
+    .spot-card h5 {
+      margin: 0 0 4px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--green-deep);
+    }
+
+    .spot-card p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .spot-card.broken::before {
+      content: "圖片載入失敗";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 210px;
+      display: grid;
+      place-items: center;
+      color: #6d584b;
+      font: 700 14px/1.2 "Noto Sans TC", sans-serif;
+      background:
+        linear-gradient(135deg, rgba(248,236,222,0.95), rgba(239,243,236,0.95)),
+        repeating-linear-gradient(
+          45deg,
+          rgba(184,90,56,0.06) 0 12px,
+          rgba(86,106,77,0.06) 12px 24px
+        );
+    }
+
+    .spot-card.broken img { opacity: 0; }
+
+    .img-note {
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .caption-mini {
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 960px) {
+      .layout { grid-template-columns: 1fr; }
+      .side { position: static; }
+      .quick-grid, .grid2, .spot-grid { grid-template-columns: 1fr; }
+      .meta { padding-right: 0; }
+      summary.head::after { position: static; display:inline-block; margin-top: 12px; }
+      .spot-card img { height: 220px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .side, .toolbar, .copy-btn, .copy-html-btn, .print-btn, summary.head::after { display: none !important; }
+      .layout { grid-template-columns: 1fr; }
+      details.day { break-inside: avoid; }
+      details.day[open] summary.head { page-break-after: avoid; }
+    }
   </style>
 </head>
 <body>
   <div class="wrap hero">
     <div class="hero-card">
-      <span class="eyebrow">AUTUMN DRIVE JOURNAL ・ 可導航・可收合・可加註</span>
+      <span class="eyebrow">AUTUMN DRIVE JOURNAL ・ 可導航・可收合・可加註・圖片版</span>
       <h1>四國 7 日自駕秋旅手冊<br>高松・道後・高知</h1>
-      <p class="sub">以高知、道後、高松為主線，依你指定改成第一天從高松機場直接前往松山。整份網頁保留收合功能、Google Maps 導航、每日備註複製，以及可交給 AI 再精修的 HTML 提示詞。</p>
+      <p class="sub">
+        已依需求調整成：第一天高松機場落地後直奔松山、第五天仍留在高知走戶外自然線、第六天再回高松並安排屋島夕陽。整份保留可收合、Google Maps 導航、每日備註複製，以及景點圖片區。
+      </p>
+
       <div class="quick-grid">
         <div class="quick"><strong>航班條件</strong>Day 1 高松機場 15:00 抵達；Day 7 高松機場 11:00 左右離開</div>
-        <div class="quick"><strong>動線</strong>高松機場 → 松山／道後 2晚 → 高知 2晚 → 高松 2晚</div>
-        <div class="quick"><strong>旅遊節奏</strong>以自駕為主，每日通勤以 2 小時內為目標</div>
-        <div class="quick"><strong>秋色重點</strong>寶嚴寺、松山城、牧野植物園、栗林公園</div>
+        <div class="quick"><strong>動線</strong>高松機場 → 松山／道後 2晚 → 高知 3晚 → 高松 1晚</div>
+        <div class="quick"><strong>旅遊節奏</strong>前段城市＋賞楓，中段高知戶外自然線，最後回高松夕陽收尾</div>
+        <div class="quick"><strong>秋色重點</strong>松山城、道後、牧野植物園、中津溪谷、栗林公園、屋島</div>
       </div>
+
       <div class="toolbar">
         <button class="tool" onclick="toggleAll(true)">一鍵展開全部行程</button>
         <button class="tool" onclick="toggleAll(false)">一鍵收合全部行程</button>
@@ -272,8 +490,8 @@
         <a href="#day2">DAY 2｜松山・道後深度</a>
         <a href="#day3">DAY 3｜松山 → 高知</a>
         <a href="#day4">DAY 4｜高知深度</a>
-<a href="#day5">DAY 5｜高知戶外深度（河道・楓葉）</a>
-<a href="#day6">DAY 6｜高知 → 高松（屋島夕陽）</a>
+        <a href="#day5">DAY 5｜高知戶外深度（河道・楓葉）</a>
+        <a href="#day6">DAY 6｜高知 → 高松（屋島夕陽）</a>
         <a href="#day7">DAY 7｜高松機場回程</a>
         <a href="#prompt">AI 精修提示詞</a>
       </nav>
@@ -281,19 +499,26 @@
         <strong>功能說明</strong><br>
         1. 每天標題列右上可收合 / 展開。<br>
         2. 各景點的「導航」可直接開啟 Google Maps。<br>
-        3. 每天底下都有「旅遊備註 / 心得」，並可一鍵複製。<br>
-        4. 最下方保留可交給 AI 再精修的 HTML 提示詞。
+        3. 每天底下都有「旅遊備註 / 心得」，可一鍵複製。<br>
+        4. 每天加上圖片區，若外部圖失敗會顯示優雅 fallback。<br>
+        5. 最下方保留可交給 AI 再精修的 HTML 提示詞。
       </div>
     </aside>
 
     <main class="content">
+
       <details id="day1" class="day" open>
         <summary class="head">
-          <div class="badges"><span class="badge">DAY 1</span><span class="badge">住：道後溫泉周邊</span><span class="badge">主題：落地直奔松山</span></div>
+          <div class="badges">
+            <span class="badge">DAY 1</span>
+            <span class="badge">住：道後溫泉周邊</span>
+            <span class="badge">主題：落地直奔松山</span>
+          </div>
           <h2 class="title">高松機場 → 松山・道後溫泉</h2>
           <div class="subtitle">高松空港（たかまつくうこう）→ 松山（まつやま）・道後温泉（どうごおんせん）</div>
           <div class="meta">今天不留高松，從機場取車後直接開往松山。這天是全趟較長的一段，但重點就是順利入住、泡湯、吃晚餐。</div>
         </summary>
+
         <div class="body">
           <div class="section">
             <h4>精準自駕時間表</h4>
@@ -306,15 +531,46 @@
             </ol>
             <div class="cost">高速費與油資會隨租車方案與 ETC 設定不同而有差異，今天以高速移動為主，整體是本趟較長的一段。</div>
           </div>
+
+          <div class="section">
+            <h4>景點圖片</h4>
+            <div class="spot-grid">
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E9%81%93%E5%BE%8C%E6%B8%A9%E6%B3%89%E6%9C%AC%E9%A4%A8.jpg" alt="道後溫泉本館" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>道後温泉本館（どうごおんせんほんかん）</h5>
+                  <p>第一天最適合的代表畫面，溫泉街氛圍一進入就有旅行感。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dogo-onsen_Honkan.jpg" alt="道後溫泉本館外觀" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>道後街區氛圍</h5>
+                  <p>適合搭配商店街、少爺機關鐘，做第一天的視覺暖身。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E9%81%93%E5%BE%8C%E6%BA%AB%E6%B3%89%E6%9C%AC%E9%A4%A8_Dogo_Onsen_Honkan_-_panoramio.jpg" alt="道後溫泉周邊" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>道後溫泉夜色感</h5>
+                  <p>若你晚上才到，這類建築立面照很適合讓版面更完整。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="section grid2">
             <div>
               <h4>景點</h4>
               <ul class="list">
                 <li><strong>道後溫泉本館</strong><span class="jp">どうごおんせんほんかん</span>｜溫泉區核心。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=道後温泉本館">導航</a></li>
                 <li><strong>道後商店街</strong><span class="jp">どうごしょうてんがい</span>｜適合暖身散步。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=道後商店街">導航</a></li>
-                <li><strong>少爺機關鐘</strong><span class="jp">ぼっちゃんからくり時計</span>｜拍照點。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=坊っちゃんカラクリ時計">導航</a></li>
+                <li><strong>少爺機關鐘</strong><span class="jp">ぼっちゃんからくりどけい</span>｜拍照點。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=坊っちゃんカラクリ時計">導航</a></li>
               </ul>
             </div>
+
             <div>
               <h4>餐廳（2～3 間）</h4>
               <ul class="list">
@@ -324,6 +580,7 @@
               </ul>
             </div>
           </div>
+
           <div class="notes">
             <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note1', this)">複製備註</button></div>
             <textarea id="note1" placeholder="可記錄：實際開車時間、旅館停車狀況、哪家鯛飯最好吃…"></textarea>
@@ -333,11 +590,16 @@
 
       <details id="day2" class="day" open>
         <summary class="head">
-          <div class="badges"><span class="badge">DAY 2</span><span class="badge">住：道後溫泉周邊</span><span class="badge">主題：賞楓＋城下町</span></div>
+          <div class="badges">
+            <span class="badge">DAY 2</span>
+            <span class="badge">住：道後溫泉周邊</span>
+            <span class="badge">主題：賞楓＋城下町</span>
+          </div>
           <h2 class="title">松山・道後深度慢遊</h2>
           <div class="subtitle">松山城（まつやまじょう）・宝厳寺（ほうごんじ）・道後公園（どうごこうえん）</div>
           <div class="meta">今天專心玩松山與道後，通勤很短。賞楓重點放在松山城與寶嚴寺的大銀杏。</div>
         </summary>
+
         <div class="body">
           <div class="section">
             <h4>精準自駕時間表</h4>
@@ -351,6 +613,36 @@
             </ol>
             <div class="cost">市區短距離移動為主，整天自駕時間大多在 1 小時內。</div>
           </div>
+
+          <div class="section">
+            <h4>景點圖片</h4>
+            <div class="spot-grid">
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Matsuyama_Castle_Main.jpg" alt="松山城" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>松山城（まつやまじょう）</h5>
+                  <p>松山最具代表性的天守，秋天視覺很有層次。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E6%9D%BE%E5%B1%B1%E5%9F%8E%EF%BC%88%E4%BC%8A%E4%BA%88%EF%BC%8901.jpg" alt="松山城近景" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>松山城近景</h5>
+                  <p>很適合當第二天主圖，能把城下町感拉出來。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E6%9D%BE%E5%B1%B1%E5%9F%8E%E5%A4%A9%E5%AE%88_%282372910004%29.jpg" alt="松山城天守" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>天守視覺補圖</h5>
+                  <p>如果你想把 Day2 做得更像旅遊手冊，這種補圖很加分。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="section grid2">
             <div>
               <h4>景點</h4>
@@ -361,6 +653,7 @@
                 <li><strong>大街道商店街</strong><span class="jp">おおかいどうしょうてんがい</span>｜補逛街。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=大街道商店街+松山">導航</a></li>
               </ul>
             </div>
+
             <div>
               <h4>餐廳（2～3 間）</h4>
               <ul class="list">
@@ -370,6 +663,7 @@
               </ul>
             </div>
           </div>
+
           <div class="notes">
             <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note2', this)">複製備註</button></div>
             <textarea id="note2" placeholder="可記錄：松山城纜車等待時間、銀杏狀況、商店街採買…"></textarea>
@@ -379,11 +673,16 @@
 
       <details id="day3" class="day" open>
         <summary class="head">
-          <div class="badges"><span class="badge">DAY 3</span><span class="badge">住：高知市區</span><span class="badge">主題：松山轉高知</span></div>
+          <div class="badges">
+            <span class="badge">DAY 3</span>
+            <span class="badge">住：高知市區</span>
+            <span class="badge">主題：松山轉高知</span>
+          </div>
           <h2 class="title">松山 → 高知</h2>
           <div class="subtitle">松山（まつやま）→ 高知（こうち）</div>
           <div class="meta">今天是第二段跨城移動，抵達高知後以市區景點為主，不再拉太遠。</div>
         </summary>
+
         <div class="body">
           <div class="section">
             <h4>精準自駕時間表</h4>
@@ -397,6 +696,36 @@
             </ol>
             <div class="cost">今天長距離移動後，市區景點相對集中，總體還在可接受範圍。</div>
           </div>
+
+          <div class="section">
+            <h4>景點圖片</h4>
+            <div class="spot-grid">
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E9%AB%98%E7%9F%A5%E5%9F%8E%E5%A4%A9%E5%AE%88.JPG" alt="高知城天守" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>高知城（こうちじょう）</h5>
+                  <p>抵達高知後最適合安排的代表景點，畫面辨識度很高。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E9%AB%98%E7%9F%A5%E5%9F%8E_-_panoramio_%282%29.jpg" alt="高知城外觀" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>高知城外觀</h5>
+                  <p>可以和高知城歷史博物館組合，做成到城下町的第一印象。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E9%AB%98%E7%9F%A5%E5%9F%8E_%E5%A4%A9%E5%AE%88%E3%81%8B%E3%82%89%E3%81%AE%E6%99%AF%E8%89%B23_Kochi_Castle_-_panoramio.jpg" alt="高知城視野" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>高知城視野感</h5>
+                  <p>如果想讓 Day3 更有「到新城市」的感覺，這張很適合補版面。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="section grid2">
             <div>
               <h4>景點</h4>
@@ -406,6 +735,7 @@
                 <li><strong>弘人市場</strong><span class="jp">ひろめいちば</span>｜美食核心。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=ひろめ市場">導航</a></li>
               </ul>
             </div>
+
             <div>
               <h4>餐廳（2～3 間）</h4>
               <ul class="list">
@@ -415,6 +745,7 @@
               </ul>
             </div>
           </div>
+
           <div class="notes">
             <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note3', this)">複製備註</button></div>
             <textarea id="note3" placeholder="可記錄：高知城停車狀況、鰹魚哪一家最好吃、弘人市場人潮…"></textarea>
@@ -424,11 +755,16 @@
 
       <details id="day4" class="day" open>
         <summary class="head">
-          <div class="badges"><span class="badge">DAY 4</span><span class="badge">住：高知市區</span><span class="badge">主題：植物園與海景</span></div>
+          <div class="badges">
+            <span class="badge">DAY 4</span>
+            <span class="badge">住：高知市區</span>
+            <span class="badge">主題：植物園與海景</span>
+          </div>
           <h2 class="title">高知深度慢遊</h2>
           <div class="subtitle">牧野植物園（まきのしょくぶつえん）・桂浜（かつらはま）・五台山（ごだいさん）</div>
-          <div class="meta">今天把高知最適合的賞楓點與海景放一起，移動距離短，節奏舒服。</div>
+          <div class="meta">今天把高知最適合的賞景點與海景放一起，移動距離短，節奏舒服。</div>
         </summary>
+
         <div class="body">
           <div class="section">
             <h4>精準自駕時間表</h4>
@@ -442,15 +778,46 @@
             </ol>
             <div class="cost">今天市區與近郊移動為主，整天開車量通常在 1 小時上下。</div>
           </div>
+
+          <div class="section">
+            <h4>景點圖片</h4>
+            <div class="spot-grid">
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E6%A1%82%E6%B5%9C6_Katsura-hama_Beach_-_panoramio.jpg" alt="桂濱" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>桂浜（かつらはま）</h5>
+                  <p>高知的經典海景，放在 Day4 很適合把節奏打開。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E6%A1%82%E6%B5%9C_%E5%9D%82%E6%9C%AC%E9%BE%8D%E9%A6%AC%E5%83%8F3_Katsura-hama_Beach_-_panoramio.jpg" alt="桂濱與龍馬像" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>桂濱視覺補圖</h5>
+                  <p>如果你想讓頁面看起來更有旅遊手冊感，海景補圖很有用。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E6%A1%82%E6%B5%9C%E5%91%A8%E8%BE%BA_-_panoramio.jpg" alt="桂濱周邊" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>高知海邊氛圍</h5>
+                  <p>若牧野植物園沒有外部圖，這裡可先用海景帶出 Day4 的戶外感。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="section grid2">
             <div>
               <h4>景點</h4>
               <ul class="list">
-                <li><strong>牧野植物園</strong><span class="jp">まきのしょくぶつえん</span>｜高知最穩的賞楓安排。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=牧野植物園">導航</a></li>
+                <li><strong>牧野植物園</strong><span class="jp">まきのしょくぶつえん</span>｜高知很適合散步的戶外安排。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=牧野植物園">導航</a></li>
                 <li><strong>五台山展望台</strong><span class="jp">ごだいさん てんぼうだい</span>｜視野很好。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=五台山展望台+高知">導航</a></li>
                 <li><strong>桂濱</strong><span class="jp">かつらはま</span>｜高知經典海景。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=桂浜">導航</a></li>
               </ul>
             </div>
+
             <div>
               <h4>餐廳（2～3 間）</h4>
               <ul class="list">
@@ -460,215 +827,191 @@
               </ul>
             </div>
           </div>
+
           <div class="notes">
             <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note4', this)">複製備註</button></div>
-            <textarea id="note4" placeholder="可記錄：植物園楓葉狀況、桂濱風大不大、餐廳排隊時間…"></textarea>
+            <textarea id="note4" placeholder="可記錄：植物園散步感受、桂濱風大不大、餐廳排隊時間…"></textarea>
           </div>
         </div>
       </details>
 
       <details id="day5" class="day" open>
-  <summary class="head">
-    <div class="badges">
-      <span class="badge">DAY 5</span>
-      <span class="badge">住：高知市區</span>
-      <span class="badge">主題：河道・鄉下・楓葉</span>
-    </div>
-    <h2 class="title">高知自然系深度慢遊</h2>
-    <div class="subtitle">仁淀川（によどがわ）・中津渓谷（なかつけいこく）・沈下橋（ちんかばし）</div>
-    <div class="meta">今天維持住高知，專跑戶外景色。重點放在清澈河道、溪谷楓葉、橋景與鄉下風情，避開太多室內點。</div>
-  </summary>
+        <summary class="head">
+          <div class="badges">
+            <span class="badge">DAY 5</span>
+            <span class="badge">住：高知市區</span>
+            <span class="badge">主題：河道・鄉下・楓葉</span>
+          </div>
+          <h2 class="title">高知自然系深度慢遊</h2>
+          <div class="subtitle">仁淀川（によどがわ）・中津渓谷（なかつけいこく）・沈下橋（ちんかばし）</div>
+          <div class="meta">今天維持住高知，專跑戶外景色。重點放在清澈河道、溪谷楓葉、橋景與鄉下風情，避開太多室內點。</div>
+        </summary>
 
-  <div class="body">
-    <div class="section">
-      <h4>精準自駕時間表</h4>
-      <ol class="timeline">
-        <li><strong>08:30</strong>｜高知市區出發。</li>
-        <li><strong>09:30–11:00</strong>｜仁淀川沿線散策、拍河道風景。</li>
-        <li><strong>11:20–12:10</strong>｜在地午餐。</li>
-        <li><strong>12:40–15:00</strong>｜中津溪谷賞楓步道散步。</li>
-        <li><strong>15:20–16:00</strong>｜沈下橋周邊停留，拍鄉下河景。</li>
-        <li><strong>17:20</strong>｜回到高知市區晚餐。</li>
-      </ol>
-      <div class="cost">今天開車時間比市區日多一些，但景色完整、節奏很值得。整體抓 2.5～3.5 小時車程較合理。</div>
-    </div>
+        <div class="body">
+          <div class="section">
+            <h4>精準自駕時間表</h4>
+            <ol class="timeline">
+              <li><strong>08:30</strong>｜高知市區出發。</li>
+              <li><strong>09:30–11:00</strong>｜仁淀川沿線散策、拍河道風景。</li>
+              <li><strong>11:20–12:10</strong>｜在地午餐。</li>
+              <li><strong>12:40–15:00</strong>｜中津溪谷賞楓步道散步。</li>
+              <li><strong>15:20–16:00</strong>｜沈下橋周邊停留，拍鄉下河景。</li>
+              <li><strong>17:20</strong>｜回到高知市區晚餐。</li>
+            </ol>
+            <div class="cost">今天開車時間比市區日多一些，但景色完整、節奏很值得。整體抓 2.5～3.5 小時車程較合理。</div>
+          </div>
 
-    <div class="section">
-      <h4>景點圖片</h4>
-      <div class="spot-grid">
-        <div class="spot-card">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BB%81%E6%B7%80%E5%B7%9D%E5%A4%A7%E6%A9%8B%20-%20panoramio.jpg"
-            alt="仁淀川風景"
-            loading="lazy"
-            referrerpolicy="no-referrer"
-          />
-          <div class="spot-card-body">
-            <h5>仁淀川（によどがわ）</h5>
-            <p>高知代表性的清澈河川，適合看河道、橋景與鄉間氛圍。</p>
+          <div class="section">
+            <h4>景點圖片</h4>
+            <div class="spot-grid">
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BB%81%E6%B7%80%E5%B7%9D%E6%B2%B3%E5%8F%A3%E3%81%AE%E3%83%80%E3%83%AB%E3%83%9E%E6%9C%9D%E6%97%A5.jpg" alt="仁淀川河景" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>仁淀川（によどがわ）</h5>
+                  <p>高知代表性的清澈河川，適合看河道、橋景與鄉間氛圍。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E7%A7%8B%E3%81%AE%E4%B8%AD%E6%B4%A5%E6%B8%93%E8%B0%B7_%28Nakatsu_Gorge_in_autumn%29_23_Nov%2C_2014_-_panoramio.jpg" alt="中津溪谷秋色" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>中津渓谷（なかつけいこく）</h5>
+                  <p>這天最強賞楓重點，溪谷、岩壁、水色都很有層次。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%AD%E6%B4%A5%E6%B8%93%E8%B0%B7.jpg" alt="中津溪谷" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>溪谷與鄉下風景</h5>
+                  <p>這一帶比城市景點更有高知味道，很適合你要的鄉下風情。</p>
+                </div>
+              </div>
+            </div>
+            <div class="img-note">Day5 圖片以高知戶外自然線為主，若你之後要再精修，可把沈下橋改成更精準的橋名版本。</div>
+          </div>
+
+          <div class="section grid2">
+            <div>
+              <h4>景點</h4>
+              <ul class="list">
+                <li><strong>仁淀川</strong><span class="jp">によどがわ</span>｜河水清澈、景色舒服。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=仁淀川">導航</a></li>
+                <li><strong>中津溪谷</strong><span class="jp">なかつけいこく</span>｜賞楓與溪谷主角。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=中津渓谷">導航</a></li>
+                <li><strong>沈下橋</strong><span class="jp">ちんかばし</span>｜河道與鄉下感代表景觀。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=高知 沈下橋">導航</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4>餐廳（2～3 間）</h4>
+              <ul class="list">
+                <li><strong>道の駅 土佐和紙工芸村</strong>｜路線上順吃很方便。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=道の駅 土佐和紙工芸村">導航</a></li>
+                <li><strong>高知アイス売店</strong>｜沿路想休息可停。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=高知アイス売店 仁淀川">導航</a></li>
+                <li><strong>明神丸</strong><span class="jp">みょうじんまる</span>｜回市區晚餐。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=明神丸+高知">導航</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="notes">
+            <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note5', this)">複製備註</button></div>
+            <textarea id="note5" placeholder="可記錄：哪一段河道最美、溪谷楓葉狀況、今天最喜歡的橋景、沿路鄉下感受…"></textarea>
           </div>
         </div>
-
-        <div class="spot-card">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/%E7%A7%8B%E3%81%AE%E4%B8%AD%E6%B4%A5%E6%B8%93%E8%B0%B7%20%28Nakatsu%20Gorge%20in%20autumn%29%2023%20Nov%2C%202014%20-%20panoramio.jpg"
-            alt="中津溪谷秋色"
-            loading="lazy"
-            referrerpolicy="no-referrer"
-          />
-          <div class="spot-card-body">
-            <h5>中津渓谷（なかつけいこく）</h5>
-            <p>這天最強賞楓重點，溪谷、岩壁、水色都很有層次。</p>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/%E4%BB%81%E6%B7%80%E5%B7%9D%E5%A0%A4%E9%98%B2%20-%20panoramio%20%281%29.jpg"
-            alt="仁淀川沿岸鄉下風景"
-            loading="lazy"
-            referrerpolicy="no-referrer"
-          />
-          <div class="spot-card-body">
-            <h5>鄉下河道風景</h5>
-            <p>這類沿岸景色很適合停車短拍，會比單純城市景點更有高知味道。</p>
-          </div>
-        </div>
-      </div>
-      <div class="img-note">圖片改用 Wikimedia Commons 直連版本，穩定度通常比一般旅遊網站縮圖更好。</div>
-    </div>
-
-    <div class="section grid2">
-      <div>
-        <h4>景點</h4>
-        <ul class="list">
-          <li><strong>仁淀川</strong><span class="jp">によどがわ</span>｜河水清澈、景色舒服。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=仁淀川">導航</a></li>
-          <li><strong>中津溪谷</strong><span class="jp">なかつけいこく</span>｜賞楓與溪谷主角。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=中津渓谷">導航</a></li>
-          <li><strong>沈下橋</strong><span class="jp">ちんかばし</span>｜河道與鄉下感代表景觀。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=高知 沈下橋">導航</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>餐廳（2～3 間）</h4>
-        <ul class="list">
-          <li><strong>道の駅 土佐和紙工芸村</strong>｜路線上順吃很方便。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=道の駅 土佐和紙工芸村">導航</a></li>
-          <li><strong>高知アイス売店</strong>｜沿路想休息可停。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=高知アイス売店 仁淀川">導航</a></li>
-          <li><strong>明神丸</strong><span class="jp">みょうじんまる</span>｜回市區晚餐。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=明神丸+高知">導航</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="notes">
-      <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note5', this)">複製備註</button></div>
-      <textarea id="note5" placeholder="可記錄：哪一段河道最美、溪谷楓葉狀況、今天最喜歡的橋景、沿路鄉下感受…"></textarea>
-    </div>
-  </div>
-</details>
+      </details>
 
       <details id="day6" class="day" open>
-  <summary class="head">
-    <div class="badges">
-      <span class="badge">DAY 6</span>
-      <span class="badge">住：高松市區</span>
-      <span class="badge">主題：移動＋夕陽收尾</span>
-    </div>
-    <h2 class="title">高知 → 高松（屋島夕陽）</h2>
-    <div class="subtitle">高知（こうち）→ 高松（たかまつ）・屋島（やしま）</div>
-    <div class="meta">今天刻意不塞太多點，回到高松後只安排屋島看夕陽，讓節奏舒服收尾。</div>
-  </summary>
+        <summary class="head">
+          <div class="badges">
+            <span class="badge">DAY 6</span>
+            <span class="badge">住：高松市區</span>
+            <span class="badge">主題：移動＋夕陽收尾</span>
+          </div>
+          <h2 class="title">高知 → 高松（屋島夕陽）</h2>
+          <div class="subtitle">高知（こうち）→ 高松（たかまつ）・屋島（やしま）</div>
+          <div class="meta">今天刻意不塞太多點，回到高松後只安排屋島看夕陽，讓節奏舒服收尾。</div>
+        </summary>
 
-  <div class="body">
-    <div class="section">
-      <h4>精準自駕時間表</h4>
-      <ol class="timeline">
-        <li><strong>10:00</strong>｜高知出發。</li>
-        <li><strong>12:00</strong>｜抵達高松市區，先寄放行李或 check in。</li>
-        <li><strong>12:20–13:20</strong>｜午餐。</li>
-        <li><strong>13:40–15:30</strong>｜市區自由休息、咖啡或簡單散步。</li>
-        <li><strong>16:00</strong>｜開車前往屋島。</li>
-        <li><strong>17:00–18:00</strong>｜屋島展望台看夕陽。</li>
-        <li><strong>18:30 後</strong>｜回高松市區晚餐。</li>
-      </ol>
-      <div class="cost">今天重點是保留體力，不再排過多景點。跨城移動約 2 小時左右，屬於很舒服的收尾安排。</div>
-    </div>
+        <div class="body">
+          <div class="section">
+            <h4>精準自駕時間表</h4>
+            <ol class="timeline">
+              <li><strong>10:00</strong>｜高知出發。</li>
+              <li><strong>12:00</strong>｜抵達高松市區，先寄放行李或 check in。</li>
+              <li><strong>12:20–13:20</strong>｜午餐。</li>
+              <li><strong>13:40–15:30</strong>｜市區自由休息、咖啡或簡單散步。</li>
+              <li><strong>16:00</strong>｜開車前往屋島。</li>
+              <li><strong>17:00–18:00</strong>｜屋島展望台看夕陽。</li>
+              <li><strong>18:30 後</strong>｜回高松市區晚餐。</li>
+            </ol>
+            <div class="cost">今天重點是保留體力，不再排過多景點。跨城移動約 2 小時左右，屬於很舒服的收尾安排。</div>
+          </div>
 
-    <div class="section">
-      <h4>景點圖片</h4>
-      <div class="spot-grid">
-        <div class="spot-card">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/Yashima02s3200.jpg"
-            alt="屋島風景"
-            loading="lazy"
-            referrerpolicy="no-referrer"
-          />
-          <div class="spot-card-body">
-            <h5>屋島（やしま）</h5>
-            <p>高松經典展望地形，適合安排傍晚收尾。</p>
+          <div class="section">
+            <h4>景點圖片</h4>
+            <div class="spot-grid">
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Yashima02s3200.jpg" alt="屋島風景" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>屋島（やしま）</h5>
+                  <p>高松經典展望地形，適合安排傍晚收尾。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ritsurin_park16s3200.jpg" alt="栗林公園" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>高松氛圍補圖</h5>
+                  <p>若你中午回到高松還有空，這種庭園畫面很適合延續收尾感。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E6%A0%97%E6%9E%97%E5%85%AC%E5%9C%92_Ritsurin_Park_-_panoramio_%283%29.jpg" alt="栗林公園景色" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>高松收尾感</h5>
+                  <p>這張可當 Day6 或 Day7 的補圖，讓整份版面更完整。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section grid2">
+            <div>
+              <h4>景點</h4>
+              <ul class="list">
+                <li><strong>屋島展望台</strong><span class="jp">やしま てんぼうだい</span>｜夕陽主角。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=屋島展望台">導航</a></li>
+                <li><strong>屋島寺</strong><span class="jp">やしまじ</span>｜若時間夠可順走。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=屋島寺">導航</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4>餐廳（2～3 間）</h4>
+              <ul class="list">
+                <li><strong>うどんバカ一代</strong>｜高松經典。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=うどんバカ一代">導航</a></li>
+                <li><strong>一鶴 高松店</strong><span class="jp">いっかく</span>｜骨付鳥。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=一鶴+高松">導航</a></li>
+                <li><strong>北濱 Alley 咖啡店</strong>｜晚餐前後散步。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=北浜Alley">導航</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="notes">
+            <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note6', this)">複製備註</button></div>
+            <textarea id="note6" placeholder="可記錄：屋島夕陽時間、今天移動是否順、晚餐選哪家、隔天還車提醒…"></textarea>
           </div>
         </div>
-
-        <div class="spot-card">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/%E9%81%93%E5%BE%8C%E6%B8%A9%E6%B3%89%E6%9C%AC%E9%A4%A8.jpg"
-            alt="道後溫泉本館"
-            loading="lazy"
-            referrerpolicy="no-referrer"
-          />
-          <div class="spot-card-body">
-            <h5>旅程回顧感圖片</h5>
-            <p>如果你想讓整份頁面更像旅遊手冊，也可以保留前段城市代表照。</p>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/%E9%81%93%E5%BE%8C%E6%B8%A9%E6%B3%89%EF%BC%88%E6%9C%AC%E9%A4%A8%EF%BC%89.JPG"
-            alt="道後溫泉本館外觀"
-            loading="lazy"
-            referrerpolicy="no-referrer"
-          />
-          <div class="spot-card-body">
-            <h5>版面補圖用</h5>
-            <p>若你之後也想把 Day1～Day4 都補上圖，這種格式可以直接複製套用。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section grid2">
-      <div>
-        <h4>景點</h4>
-        <ul class="list">
-          <li><strong>屋島展望台</strong><span class="jp">やしま てんぼうだい</span>｜夕陽主角。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=屋島展望台">導航</a></li>
-          <li><strong>屋島寺</strong><span class="jp">やしまじ</span>｜若時間夠可順走。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=屋島寺">導航</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>餐廳（2～3 間）</h4>
-        <ul class="list">
-          <li><strong>うどんバカ一代</strong>｜高松經典。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=うどんバカ一代">導航</a></li>
-          <li><strong>一鶴 高松店</strong><span class="jp">いっかく</span>｜骨付鳥。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=一鶴+高松">導航</a></li>
-          <li><strong>北濱 Alley 咖啡店</strong>｜晚餐前後散步。<a class="navbtn" target="_blank" href="https://maps.google.com/?q=北浜Alley">導航</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="notes">
-      <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note6', this)">複製備註</button></div>
-      <textarea id="note6" placeholder="可記錄：屋島夕陽時間、今天移動是否順、晚餐選哪家、隔天還車提醒…"></textarea>
-    </div>
-  </div>
-</details>
+      </details>
 
       <details id="day7" class="day" open>
         <summary class="head">
-          <div class="badges"><span class="badge">DAY 7</span><span class="badge">回程日</span><span class="badge">主題：輕鬆到機場</span></div>
+          <div class="badges">
+            <span class="badge">DAY 7</span>
+            <span class="badge">回程日</span>
+            <span class="badge">主題：輕鬆到機場</span>
+          </div>
           <h2 class="title">高松市區 → 高松機場</h2>
           <div class="subtitle">高松（たかまつ）→ 高松空港（たかまつくうこう）</div>
           <div class="meta">不再安排景點，保留還車與報到緩衝即可。</div>
         </summary>
+
         <div class="body">
           <div class="section">
             <h4>精準自駕時間表</h4>
@@ -679,6 +1022,36 @@
             </ol>
             <div class="cost">這天只保留移動，不再塞景點最穩。</div>
           </div>
+
+          <div class="section">
+            <h4>景點圖片</h4>
+            <div class="spot-grid">
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ritsurin_park16s3200.jpg" alt="栗林公園" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>高松代表畫面</h5>
+                  <p>即使最後一天不排景點，也能用這張作為旅程收尾的版面圖。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Yashima02s3200.jpg" alt="屋島" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>前一晚回味感</h5>
+                  <p>和 Day6 的夕陽行程呼應，讓結尾更完整。</p>
+                </div>
+              </div>
+
+              <div class="spot-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E6%A0%97%E6%9E%97%E5%85%AC%E5%9C%92_Ritsurin_Park_-_panoramio_%283%29.jpg" alt="高松庭園景色" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.spot-card').classList.add('broken')">
+                <div class="spot-card-body">
+                  <h5>高松餘韻</h5>
+                  <p>最後一天不用再跑景點，視覺上保留高松記憶就很夠。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="section grid2">
             <div>
               <h4>最後可做的事</h4>
@@ -688,6 +1061,7 @@
                 <li>機場內補買最後伴手禮。</li>
               </ul>
             </div>
+
             <div>
               <h4>最後想吃的 2～3 樣</h4>
               <ul class="list">
@@ -697,6 +1071,7 @@
               </ul>
             </div>
           </div>
+
           <div class="notes">
             <div class="notes-top"><span>旅遊備註 / 心得</span><button class="copy-btn" onclick="copyNote('note7', this)">複製備註</button></div>
             <textarea id="note7" placeholder="可記錄：這趟最喜歡的城市、下次想補的景點、租車心得…"></textarea>
@@ -707,34 +1082,36 @@
       <section id="prompt" class="prompt">
         <h2>可交給 AI 再精修的 HTML 提示詞</h2>
         <p>下面這段提示詞可直接交給會產生 HTML 的 AI，進一步美化或延伸功能。</p>
-        <pre id="promptText">請幫我製作一份「日式楓葉風格、排版賞心悅目、可瀏覽、可導航、可自由加上旅遊備註與心得」的四國 7 日自駕行程 HTML 網頁。
+        <pre id="promptText">請幫我製作一份「日式楓葉風格、排版賞心悅目、可瀏覽、可導航、可自由加上旅遊備註與心得、含穩定圖片區」的四國 7 日自駕行程 HTML 網頁。
 
 【必須包含的功能】
 1. 每天標題列右上可收合 / 展開。
 2. 點各景點的「導航」可直接開啟 Google Maps。
 3. 每天底下都有「旅遊備註 / 心得」，可一鍵複製。
-4. 最下方保留可交給 AI 再精修的 HTML 提示詞。
-5. 整體風格要適合日式楓葉感，米白、楓葉橘棕、深綠、淡金色調，版面像精品旅遊雜誌。
-6. 所有日文漢字要加上平假名。
-7. 每日餐廳要 2～3 間。
+4. 每天加入景點圖片卡片，若外部圖片失敗要顯示 fallback 樣式。
+5. 最下方保留可交給 AI 再精修的 HTML 提示詞。
+6. 整體風格要適合日式楓葉感，米白、楓葉橘棕、深綠、淡金色調，版面像精品旅遊雜誌。
+7. 所有日文漢字要加上平假名。
+8. 每日餐廳要 2～3 間。
 
 【行程主軸】
 - Day 1：高松機場 15:00 抵達後，直接自駕前往松山 / 道後溫泉住宿
 - Day 2：松山・道後深度慢遊
 - Day 3：松山自駕前往高知
 - Day 4：高知深度慢遊
-- Day 5：高知自駕回高松
-- Day 6：高松深度慢遊
+- Day 5：高知戶外自然線，重點是河道、楓葉、鄉下風情
+- Day 6：高知回高松，只安排屋島夕陽收尾
 - Day 7：高松機場回程
 
 【內容要求】
-- 每天要有：中文標題、日文標題、當日主題、精準自駕時間表、3～4 個景點、2～3 間餐廳、每日備註區
+- 每天要有：中文標題、日文標題、當日主題、精準自駕時間表、景點圖片區、3～4 個景點、2～3 間餐廳、每日備註區
 - 所有景點都附上 Google Maps 搜尋連結
 - 保留側邊快速導覽
 - 頁首要有一鍵展開全部行程、一鍵收合全部行程、列印 PDF 按鈕
 - 頁面需支援手機與桌機瀏覽
 - 請直接輸出單一完整 HTML 檔案，不要省略內容</pre>
       </section>
+
     </main>
   </div>
 
@@ -742,6 +1119,7 @@
     function toggleAll(open) {
       document.querySelectorAll('details.day').forEach(d => d.open = open);
     }
+
     async function copyNote(id, btn) {
       const text = document.getElementById(id).value || '';
       try {
@@ -755,6 +1133,7 @@
       btn.textContent = '已複製';
       setTimeout(() => btn.textContent = original, 1400);
     }
+
     async function copyHtmlPrompt(btn) {
       const text = document.getElementById('promptText').innerText;
       try {
